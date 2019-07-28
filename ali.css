@@ -1,0 +1,286 @@
+body{
+	/* background-color: #D8D6D3; */
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+	/* background-image: url("Lebron\ Sketch.jpg") ; */
+	/* background-repeat: no-repeat; */
+	/* background-attachment: fixed; */
+	/* background-position: center; */
+	/* background-position-y: 20px; */
+	/* background-size: 400px; */
+	/*background-image: linear-gradient(yellow,#D8D6D3);*/
+	/*background-image: url("photo.jpg");*/
+	/* background-repeat: no-repeat; */
+	/* background-position: right top; */
+	/* background-attachment: fixed; */
+	/* background: #ffffff url("img_tree.png") no-repeat right top; */
+	/* background-repeat: repeat-x //the background will be repeated only horizontally// */
+	/* display: block; */
+	color: rgb(85, 82, 82);
+	font-size: 20px;
+	text-shadow: 10cm;
+}
+ul.nav-bar{
+	list-style-type: none;
+	background-color: rgb(15, 0, 82);
+	width:100%;
+	height:40px;
+	/* text-align: justify; */
+	
+}
+ul.nav-bar li{
+	float: right;
+	margin-right: 150px;
+	
+}
+ul.nav-bar li a{
+	color:rgb(8, 240, 77);
+	
+}
+.drop-items{
+	display: none;
+	position: absolute;
+	z-index:1;
+}
+.drop-items a{
+	display: block;
+	
+}
+ul.nav-bar li.dropdown:hover .drop-items{
+	display: block;
+	z-index:1;
+	
+}
+
+
+@font-face{
+	font-family: poemfont;
+	src:url(font/UrdType.ttf);
+}
+@font-face{
+	font-family: myfont;
+	src:url(font/BNAZANIN.TTF);
+}
+#container{
+	/* color:rgba(93, 15, 167, 0.856); */
+	margin-left: auto;
+	margin-right: auto;
+	/* font-family: myfont; */
+	font-size: 25px; 
+	font-weight: 1cm;
+	display:inline;
+	line-height: 35px;
+	
+}
+#header {
+	color: #0FD818 ;
+	/* font-family: myfont; */
+	/* position: fixed; */
+	
+}
+#poems{
+	font-family: poemfont;
+	font-size: 25px;
+	color: #F1FD46;
+	/*background-color: black;*/
+	background-image: url(notebook.jpg);
+	background-size: 900px;
+	border-radius: 50%; 
+}
+#tables{
+	position: relative;
+	bottom: 300px;
+	left:20px;
+	border-width: 10px;
+	border-color: gold;
+	/* border-style: solid; */
+	border-radius: 12%;
+	border-bottom: 6px solid red;
+	/* overflow-x: auto; */
+	/* border-collapse:  */
+	/* border-bottom-width: 8px; */
+	/* outline-color: aqua; */
+}
+#image{
+	max-width: 500px;
+	/* max-width: 500px; */
+	height: 500px;
+	/* position:sticky; */
+	/* position: fixed; */
+	opacity: 0.9;
+	position: relative;
+}
+#image:hover{
+	opacity:0.6;
+}
+#english_text
+{
+	font-family: /*Times New Roman, Times, serif*/ helvetica;
+	width: 500px;
+	height: 300px;
+	text-align: right;
+	text-decoration: underline;
+	text-transform: capitalize;
+	text-indent: 70px;
+	letter-spacing: 3px;
+	line-height: 45px;
+	word-spacing: 10px;
+	overflow:auto;
+	/* overflow:hidden; */
+	/* overflow:visible; */
+	/* text-overflow: clip; */
+	/* outline-color: aqua; */
+}
+#music{
+	padding: 5px;
+	margin: 5px;
+	 
+}
+#ordered-list{
+	list-style-type: disc;/*  lower-alpha //upper-roman //square //circle */
+	/* list-style-position:inside/outside  */
+	/* list-style-image:  url('sqpurple.gif')*/
+	/* list-style: type//position//image (shorthand) */
+}
+#grid{
+	display: grid;
+	grid-template-columns: repeat(3,minmax(100px,200px));/* repeat(3,80px) repeat(2,1fr 80px) repeat(3,minmax(80px,180px)) 80px 80px 80px*/
+	grid-template-rows: 50px 50px 50px;/* repeat(3,50px) */
+	grid-gap: 20px;
+	color: rgba(63, 218, 16, 0.973);
+	/*grid-row-gap: 20px;
+	grid-column-gap: 20px;*/
+	padding: 20px;
+	/* margin-left: 40%; */
+	/* margin-right: 60%; */
+	font-size: xx-large;
+	font-family: Arial, Helvetica, sans-serif;
+	/*justify-items: center;*/ 
+	/*align-items: stretch;*/
+	grid-template-areas:
+	"header1 header"
+	"aadvert advert"
+	"footer1 footer";
+}
+#p1{background-color: lime;
+	
+	/* grid-column: 1/3; */
+	grid-area: header1;
+}
+#p2{background-color: rgb(255, 0, 0);
+	
+	grid-area: header;
+}
+#p3{
+	background-color: rgb(10, 99, 233);
+	/* grid-row: 2/4; */
+	grid-area: advert;
+}
+#p4{
+	background-color: black;
+	grid-area: aadvert;
+}
+#p5{
+	background-color: orange;
+	grid-area: footer;
+}
+#p6{
+	background-color: purple;
+	grid-area: footer1;
+}
+@media(min-width:600px)
+{
+	#grid
+	{
+		grid-template-areas: 
+		"header header1"
+		"advert aadvert"
+		"footer footer1";
+	}
+}
+#box-container{
+	display: flex;
+	flex-direction: row; /*column -- column-reverse -- ...*/
+	justify-content: center; /*flex-end -- ...*/
+	 /*align-items  */
+	 flex-wrap: wrap;
+}
+#box-1{
+	background-color: rgb(70, 143, 253);
+	height: 150px;
+	width: 300px;
+	order:2;
+	/* flex-shrink: 1; */
+	/* flex-grow: 1; */
+}
+#box-2{
+	background-color: rgb(10, 243, 88);
+	height: 150px;
+	width: 300px;
+	order:1;
+	/* flex-shrink: 2; */
+	/* flex-grow: 2; */
+}
+#box-3{
+	background-color: rgb(89, 12, 211);
+	height: 150px;
+	width: 300px;
+	order:5;
+	/* flex-shrink: 3; */
+	/* flex-grow: 3; */
+}
+#box-4{
+	background-color: rgb(12, 211, 161);
+	height: 150px;
+	width: 300px;
+	order:4;
+	/* flex-shrink: 4; */
+	/* flex-grow: 4; */
+}
+#box-5{
+	background-color: rgb(211, 12, 128);
+	height: 150px;
+	width: 300px;
+	order:3;
+	/* flex-shrink: 5; */
+	/* flex-grow: 5; */
+}
+#box-6{
+	background-color: rgb(223, 148, 8);
+	height: 150px;
+	width: 300px;
+	max-width: 350px; 
+	order:6;
+	align-self: flex-start;
+	/* flex-shrink: 6; */
+	/* flex-grow: 6; */
+}
+/* a{
+	text-decoration: none;
+} */
+a{
+	text-decoration: none;
+	color: rgb(212, 75, 75);
+}
+a:hover{
+	color: black;
+	font-size: 28px;
+}
+#perspolis:hover{
+	color: red;
+	font-size: 28px;
+}
+#realmadrid:hover{
+	color:gold;
+	font-size: 28px;
+}
+tr:hover{
+	color: #fa1f1f;
+}
+html{
+	scroll-behavior:smooth;
+}
+
+
+
+
