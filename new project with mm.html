@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="farsi">
 <head>
+        <link rel="stylesheet" type="text/css" href="Project.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +12,45 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md bg-secondary justify-content-center mb-5 container-fluid navbar-dark">
+        <a class="navbar-brand mr-5" href="#"><img src="Bootstrap.jpg" alt="" width="40px"></a>
+        <form class="form-inline align-right" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="search...">
+            <button class="btn btn-primary" type="submit">search</button>
+        </form>
+        
+        <button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#collapsible_navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsible_navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light pt-4 pr-4 pl-4 pb-0  font-25" href="#">home</a></li>
+                <li class="nav-item"><a class="nav-link text-light pt-4 pr-4 pl-4 pb-0  font-25" href="#">about</a></li>
+                <li class="nav-item dropdown"><a class="nav-link text-light pt-4 pr-4 pl-4 pb-0  dropdown-toggle font-25" data-toggle="dropdown" href="#">sth else</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">item1</a>
+                        <a class="dropdown-item" href="#">item2</a>
+                        <a class="dropdown-item" href="#">item3</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-light pt-4 pr-4 pl-4 pb-0  font-25" href="#">market</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark mt-5 container">
+        <a class="navbar-brand pl-5 py-3" href="#">navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible_navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsible_navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="">map</a></li>
+                <li class="nav-item"><a class="nav-link" href="">links</a></li>
+            </ul>
+        </div>
+    </nav> -->
     <div class="container text-break">
         <div class="row" style="margin-top: 50px;">
             <div class="container col-sm-3 bg-info text-capitalize" ><p class="display-1">display-1</p></div>
