@@ -1,5 +1,5 @@
 document.getElementById("demo").innerHTML = 5 + 6;
-window.alert('hello my friends');
+alert('hello my friends');
 console.log('this message is written by me and dissplayed in the console');
 var x , y , z;
 x = 3;
