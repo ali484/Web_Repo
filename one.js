@@ -28,3 +28,11 @@ document.getElementById("changecolor").style.backgroundColor="red"
 function changesrc(){
   document.getElementById("image1").src="Me_Kid.JPG"
 }//change attribute
+function addnewtag(){
+var newpre=document.createElement("pre");
+newpre.innerHTML="بر حذر باش که سر میشکند دیوارش"
+document.getElementById("addnewtags").appendChild(newpre);
+}
+/*function removetag(){
+ document.getElementById("removetag").removeChild(document.getElementById("removetag").getElementById("link"))
+}*/
