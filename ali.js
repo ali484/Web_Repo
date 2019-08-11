@@ -36,6 +36,7 @@ function ShowDate(){
 var string = 'this is just a test string to use the string functions';
 var length = string.length; //shows the length of the string
 var position_first = string.indexOf('string');//shows the starting position of the 
+console.log('the position of the first string in the variable string is '+ string.indexOf('string'));
 document.getElementById('string_test_1').innerHTML = position_first;
 var position_last = string.lastIndexOf('string');
 document.getElementById('string_test_2').innerHTML = position_last;
@@ -93,3 +94,48 @@ console.log('the array converted to a string \n' + fruitArr.toString());
 console.log('the array converted to a string \n' + fruitArr.join("*"));
 fruitArr.pop();
 console.log('the fruit array after being poped is' + fruitArr);
+fruitArr.shift(); //removes the first element //returns a string
+fruitArr.unshift('grape'); //adds an element to the start of an array // returns the new array length
+// delete fruitArr[0]; delets the element
+fruitArr.splice(2,0,'garlic','BANANAS');//where to start-how many delete-what to add for the rest
+console.log('the array after being spliced is ' + fruitArr);
+var newFruitArr = fruitArr.concat(['oranges','cucumber','apples']);//adds the content to the end of the array
+console.log(newFruitArr);
+var newFruitArr2 = fruitArr.slice(3);
+console.log(newFruitArr2);
+var fruitArr_reverse = fruitArr.reverse();//effects the array itself
+console.log(fruitArr);
+var txt = " is in foreach func";
+fruitArr.forEach(arrForEach);//pretty self explainatory
+function arrForEach(value,index,arr){
+    console.log( value + txt);
+    return;
+}
+var numberArr = [20,45,92,10,28,54];
+var numberArr_doubled = numberArr.map(numberArrfunc);
+function numberArrfunc(value ,index , arr){
+    console.log(value*2);
+    return value*2;
+}
+console.log(numberArr_doubled);
+var numberArr_over18 = numberArr.filter(arrFilterfunc);
+function arrFilterfunc(value,index,arr){
+    return value>35;
+}
+console.log(numberArr_over18);
+console.log('every values of numberArr over 20 is ' + numberArr.every(over18Test));
+function over18Test(value,index,arr){
+    return value>18;
+}
+console.log('some of values of numberArr over 20 is ' + numberArr.some(over18Test));
+function over18Test(value,index,arr){
+    return value>18;
+}
+console.log(fruitArr);
+console.log('the index of BANANA in the using indexOf array is '+ fruitArr.indexOf("watermelon"));//shows the index of the searched element lastIndexOf shows the last occurence
+console.log('the first element with the value more than 30 in numberArr is '+ numberArr.find(over30));//find index returns the index number works the same way
+function over30 (value,index,arr){
+    return value>30;
+}
+console.log('the date is '+ new Date());
+console.log('this is a specified date set by me --> '+ new Date(2018,5,21,13,41,54,88));
