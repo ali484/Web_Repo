@@ -36,3 +36,23 @@ document.getElementById("addnewtags").appendChild(newpre);
 /*function removetag(){
  document.getElementById("removetag").removeChild(document.getElementById("removetag").getElementById("link"))
 }*/
+function stringmethods(){
+  var txt="mohadese"
+ var txtp1=document.createElement("p")
+var p1text=txtp1.innerHTML="mahadese size="+ txt.length+"<br />"
+document.getElementById("methods").appendChild(txtp1)
+
+
+
+ var txtp2=document.createElement("p")
+ var p2text=txtp2.innerHTML="the third letter of mohadese=" +txt.charAt(3)+"<br />"
+ document.getElementById("methods").appendChild(txtp2)
+
+
+var txt1="ali"
+var txtp3=document.createElement("p")
+var p3text=txtp3.innerHTML="combining strings="+txt.concat(txt1)
+document.getElementById("methods").appendChild(txtp3)
+
+
+}
