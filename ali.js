@@ -195,3 +195,15 @@ var lorem_replaced_global = lorem.replace(/lorem/g,'ali');
 console.log("this lorem text replaced with global modifier (lorem-->ali) \n" + lorem_replaced_global);
 var patt = /lorem/;
 console.log('this test() function checks if the parameter is in the searched string -->'+patt.test(lorem));
+class auto_mobile{
+    constructor(brand,year,top_speed){
+        this.car_name = brand;
+        this.model = year;
+        this.top_speed = top_speed;
+    }
+    present(){
+        return "this is a " + this.car_name + " model " + this.model + " with the top speed " + this.top_speed;
+    }
+}
+var ford = new auto_mobile('ford',1983,220);
+console.log(ford.present());
