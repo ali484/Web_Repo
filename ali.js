@@ -1,3 +1,4 @@
+"use strict";
 document.getElementById("demo").innerHTML = 5 + 6;
 // alert('hello my friends');
 console.log('this message is written by me and dissplayed in the console');
@@ -5,21 +6,16 @@ var x , y , z;
 x = 3;
 y = 9;
 z = x + y;
-z **=z
-document.getElementById("numbers").innerHTML = 'js number is' + z;
+z **=z;
 var carArr = ["pride","prado",'ferrari'];
-document.getElementById('cararr').innerHTML = carArr;
 var object_Ali = {firstname:'ali' , lastname:'pileforooshha' , car:'none'};
 // object_Ali = null; empties the object by setting it to null
-document.getElementById('object').innerHTML = object_Ali.firstname;
-document.getElementById('type').innerHTML = typeof carArr; //return the type of object_Ali
 var ali;
 ali = undefined; // both value and type are undefined
 function myfunc (par1 , par2){
     return par1*par2;
 }
 var func = myfunc(x,y);
-document.getElementById('func_id').innerHTML='this number is the result of a function and should be 27 -->'+func;
 var person = {      //this is an object containig all the shit niggas
     firstname : 'ali',
     lastname : 'pileforooshha',
@@ -29,33 +25,30 @@ var person = {      //this is an object containig all the shit niggas
         return this.firstname + " " + this.lastname;
     }
 }
-document.getElementById('obj_id').innerHTML = person.fullname();
 function ShowDate(){
     document.getElementById('func_time').innerHTML=Date();
 }
 var string = 'this is just a test string to use the string functions';
 var length = string.length; //shows the length of the string
 var position_first = string.indexOf('string');//shows the starting position of the 
-console.log('the position of the first string in the variable string is '+ string.indexOf('string'));
-document.getElementById('string_test_1').innerHTML = position_first;
+console.log('the position of the first string in the variable string using indexOf() is '+ string.indexOf('string'));
 var position_last = string.lastIndexOf('string');
-document.getElementById('string_test_2').innerHTML = position_last;
+console.log('the position of the last string in the variable string using lastIndexOf() is ' + string.lastIndexOf('string'));
 var search_pos = string.search('to use the');
-document.getElementById('string_test_3').innerHTML = search_pos;
+console.log('the position of the first string in the variable string using search() is '+ string.search('string'));
 var string_sliced = string.slice(8,12);
-document.getElementById('string_test_4').innerHTML = string_sliced;
+console.log('this word was sliced out of the string using .slice()'+ string.slice(8,12));
 var string2 = "Kiwi , banana , Pride , ME , javascript";
 var replaced = string2.replace('banana' , 'milkchoclate');
-document.getElementById('string_test_5').innerHTML = replaced;
+console.log('this is another string which banana has been replaced with milkchoclate in using .replace()'+string2.replace('banana' , 'milkchoclate'));
 var toupper = string2.toUpperCase();
-document.getElementById('string_test_6').innerHTML = toupper;
+console.log('string converted to all upper case using .toUpperCase() '+string2.toUpperCase());
 var tolowwer = string2.toLowerCase();
-document.getElementById('string_test_7').innerHTML = tolowwer;
-// var trimed = string2.trim(); it removes spaces from both  start and end of the
-// string.charAt(20) returns the character at that position
-// string[0]; returns the first character of the string
+console.log('string converted to all lower case using .toLowerCase() '+string2.toLowerCase());
+var trimed = string2.trim(); //it removes spaces from both  start and end of the
+string.charAt(20); // returns the character at that position
+string[0]; //returns the first character of the string
 var str_arr = string2.split(",");//splits the string into array by the commas
-document.getElementById('string_test_8').innerHTML = str_arr[2];
 console.log(string2);
 // var console_test = prompt("enter a number"); used for getting a number from user
 //var x = 123e5;     12300000
@@ -85,24 +78,27 @@ console.log("parseFloat('years 10') is "+parseFloat('years 10'));
 var fruitArr = ['kiwi' , 'grape' , 'mango' , 'pineapple' , 'watermelon'];
 console.log(fruitArr);
 var fruitArr_lenght = fruitArr.length;
-console.log('the lenght of array is ' + fruitArr_lenght);
+console.log('the lenght of array is using "fruitArr.length" --> ' + fruitArr_lenght);
 var fruitArr_sorted = fruitArr.sort();
-console.log("array sorted is " + fruitArr_sorted);
+console.log('the sorted array using .sort() is ' + fruitArr);
 fruitArr.push('dragonFruit');
-console.log('the fruit array after being pushed' + fruitArr);
+console.log('the fruit array after being pushed \n' + fruitArr);
 console.log('the array converted to a string \n' + fruitArr.toString());
-console.log('the array converted to a string \n' + fruitArr.join("*"));
+console.log('the array converted to a string with join("*") \n' + fruitArr.join("*"));
 fruitArr.pop();
-console.log('the fruit array after being poped is' + fruitArr);
+console.log('the fruit array after being poped is ' + fruitArr);
 fruitArr.shift(); //removes the first element //returns a string
+console.log('array after being shifted is ' + fruitArr);
 fruitArr.unshift('grape'); //adds an element to the start of an array // returns the new array length
+console.log('array after being unshift("grape") is \n' + fruitArr);
 // delete fruitArr[0]; delets the element
-fruitArr.splice(2,0,'garlic','BANANAS');//where to start-how many delete-what to add for the rest
+fruitArr.splice(2,2,'garlic','BANANAS');// where to start-how many delete from the written position-what to add for the rest
 console.log('the array after being spliced is ' + fruitArr);
 var newFruitArr = fruitArr.concat(['oranges','cucumber','apples']);//adds the content to the end of the array
-console.log(newFruitArr);
+console.log("this is a new array made using concat \n" + newFruitArr);
+console.log('this is the original array which we used concat on'+ fruitArr);
 var newFruitArr2 = fruitArr.slice(3);
-console.log(newFruitArr2);
+console.log('this is a new array made by using the slice method' + newFruitArr2);
 var fruitArr_reverse = fruitArr.reverse();//effects the array itself
 console.log(fruitArr);
 var txt = " is in foreach func";
@@ -118,6 +114,7 @@ function numberArrfunc(value ,index , arr){
     return value*2;
 }
 console.log(numberArr_doubled);
+console.log(numberArr);
 var numberArr_over18 = numberArr.filter(arrFilterfunc);
 function arrFilterfunc(value,index,arr){
     return value>35;
@@ -177,7 +174,24 @@ for(counter = 0;counter<10;counter++){
     }
 }
 console.log(counter2 + " people are allowed to vote");
-
+console.log('for/in loop');
 for(x in fruitArr){
     console.log(fruitArr[x]);
 }
+console.log('for/of loop');
+for(x of fruitArr){
+    console.log(x);
+}
+var number = 12;
+var stringed_number = String(number);
+console.log(stringed_number);
+console.log('this is a 12.93 as a string turned into a number using Number -->' + Number('12.93'));
+console.log('this is a 12.93 as a string turned into a number using parseInt -->' + parseInt('12.93'));
+console.log('this is a 12.93 as a string turned into a number using parseFloat -->' + parseFloat('12.93'));
+var lorem = "lorem ipsum dolor sit amet, consectetur adipiscing elit,lorem ipsum dolor sit amet, consectetur adipiscing elit,lorem ipsum dolor sit amet, consectetur adipiscing elit,lorem ipsum dolor sit amet, consectetur adipiscing elit"
+var lorem_replaced = lorem.replace('lorem','ali');
+console.log("this lorem text replaced (lorem-->ali) \n" + lorem_replaced);
+var lorem_replaced_global = lorem.replace(/lorem/g,'ali');
+console.log("this lorem text replaced with global modifier (lorem-->ali) \n" + lorem_replaced_global);
+var patt = /lorem/;
+console.log('this test() function checks if the parameter is in the searched string -->'+patt.test(lorem));
