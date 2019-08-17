@@ -28,3 +28,78 @@ document.getElementById("changecolor").style.backgroundColor="red"
 function changesrc(){
   document.getElementById("image1").src="Me_Kid.JPG"
 }//change attribute
+function addnewtag(){
+var newpre=document.createElement("pre");
+newpre.innerHTML="بر حذر باش که سر میشکند دیوارش"
+document.getElementById("addnewtags").appendChild(newpre);
+}
+/*function removetag(){
+ document.getElementById("removetag").removeChild(document.getElementById("removetag").getElementById("link"))
+}*/
+function appendchild(){
+  var txt="mohadese"
+ var txtp1=document.createElement("p")
+var p1text=txtp1.innerHTML="mahadese size="+ txt.length+"<br />"
+document.getElementById("methods").appendChild(txtp1)
+
+
+
+ var txtp2=document.createElement("p")
+ var p2text=txtp2.innerHTML="the third letter of mohadese=" +txt.charAt(3)+"<br />"
+ document.getElementById("methods").appendChild(txtp2)
+
+
+var txt1="ali"
+var txtp3=document.createElement("p")
+var p3text=txtp3.innerHTML="combining strings="+txt.concat(txt1)
+document.getElementById("methods").appendChild(txtp3)
+
+
+}
+function arraymethods(){
+var names1=["ali" , "reza" , "mohammad"]
+//alert(names1.toString())
+//alert(names1.join("*"))
+//alert(names1.pop())//remove the last element from an array
+
+//alert(names1.push("mody"))
+//alert(names1.shift())//remove first element 
+//names1[names.length]="hasan"//adds new element 
+//alert(names1)
+//delete names1[0] 
+//alert(names1)
+var names2=["mohadese" , "zahra" , "vahid"]
+var names3=names1.concat(names2)
+//alert(names1.concat(names2))
+//alert(names3.slice(1,3))
+//alert(names1.sort())
+//alert(names1.reverse())
+var numbers=[14 , 98 ,1,78,77,12,7]
+numbers=numbers.sort(function(a , b){return a-b})//sort numbers in js:)
+//alert(numbers)
+//names3=names3.splice(1 , 2 ,"hasan" , "hosien")
+//alert(names3)
+}
+
+
+
+function stringmethods(){
+var fname="mohadese"
+var lname="gharakhanlo"
+//alert(fname.length)
+var charat=fname.charAt(3) // return a
+//alert(charat)
+var charcodeat=fname.charCodeAt(3)
+//alert(charcodeat)
+var concat=fname.concat("-" ,lname)
+//alert(concat)
+var indexof=fname.indexOf("a")//lastindexof and indxof and search have same performence
+//alert(indexof)
+var slice=fname.slice(0 , 4)
+//alert(slice)
+var fruit="apple,orange,benana"
+var split=fruit.split("a" , 2)
+//alert(split)
+var substr=fname.substr(2 , 3)
+//alert(substr)
+}

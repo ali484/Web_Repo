@@ -14,13 +14,28 @@
                 width: 200px;
                 height: 200px;
             }
+            #addnewtags{
+              
+                width: 300px;
+                height: 100px;
+                background-color: darksalmon;
+            }
+            #removetag{
+                float: left;
+                width: 200px;
+                height: 100px;
+            }
+            table{
+                width: 500px;
+                border-style: solid;
+               
 
-
+            }
 
         </style>
         
     </head>
-<body onload="myfunc()">
+<body onload=" stringmethods()">
    <span id="myspan">0</span><br />
    <input type="text" id="txt1" onfocus="focusfunc()" onplur="onplurfunc()" />
    <br /><br /><br />
@@ -33,10 +48,23 @@
         <p>love</p>
         <p>you</p>
     </div><br /><br />
+
    <input type="button" id="button2" value="click" onclick="changesrc()" /><br />
    <img src="backheader3.png" id="image1" />
 
 
+<div id="addnewtags">
+    <pre style="direction: rtl">ای که از کوچه ی معشوقه ی ما میگذری</pre>
+    <input type="button" value="click" onclick="addnewtag()" />
+</div>
+
+
+
+
+<div id="methods">
+    string methods:
+    <input type="button" onclick="appendchild()" />
+</div>
    
    <script src="one.js" type="text/javascript">
   
