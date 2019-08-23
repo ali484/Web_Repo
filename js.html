@@ -31,11 +31,27 @@
                
 
             }
+            #testname{
+                width:200px;
+                height: 50px;;
+                border-style: solid;
+            }
+            #showmethods{
+                width: 100%;
+                height: 50px;
+                border-style: solid;
+
+            }
+            #time{
+                width: 100px;
+                height: 30px;
+                border-style: solid;
+            }
 
         </style>
         
     </head>
-<body onload=" stringmethods()">
+<body >
    <span id="myspan">0</span><br />
    <input type="text" id="txt1" onfocus="focusfunc()" onplur="onplurfunc()" />
    <br /><br /><br />
@@ -63,9 +79,22 @@
 
 <div id="methods">
     string methods:
-    <input type="button" onclick="appendchild()" />
+    <input type="button" onclick="appendchild()" value="click"/>
+    <div id="showmethods">
+
+    </div>
 </div>
-   
+<br /><br /><br /><br /><br />
+<div id="window">
+    <input value="open google" type="button" onclick="window_open()"/>
+<input value="close google" type="button" onclick="window_close()" />
+<div id="time">
+
+</div>
+<input type="button" value="pouse" onclick="pouse_time()" />
+</div>
+<br /><br /><br /><br /><br />
+
    <script src="one.js" type="text/javascript">
   
    </script>

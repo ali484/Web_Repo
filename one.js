@@ -40,19 +40,19 @@ function appendchild(){
   var txt="mohadese"
  var txtp1=document.createElement("p")
 var p1text=txtp1.innerHTML="mahadese size="+ txt.length+"<br />"
-document.getElementById("methods").appendChild(txtp1)
+document.getElementById("showmethods").appendChild(txtp1)
 
 
 
  var txtp2=document.createElement("p")
  var p2text=txtp2.innerHTML="the third letter of mohadese=" +txt.charAt(3)+"<br />"
- document.getElementById("methods").appendChild(txtp2)
+ document.getElementById("showmethods").appendChild(txtp2)
 
 
 var txt1="ali"
 var txtp3=document.createElement("p")
 var p3text=txtp3.innerHTML="combining strings="+txt.concat(txt1)
-document.getElementById("methods").appendChild(txtp3)
+document.getElementById("showmethods").appendChild(txtp3)
 
 
 }
@@ -79,6 +79,8 @@ numbers=numbers.sort(function(a , b){return a-b})//sort numbers in js:)
 //alert(numbers)
 //names3=names3.splice(1 , 2 ,"hasan" , "hosien")
 //alert(names3)
+
+
 }
 
 
@@ -102,4 +104,62 @@ var split=fruit.split("a" , 2)
 //alert(split)
 var substr=fname.substr(2 , 3)
 //alert(substr)
+}
+
+function regexp(){
+var patt1=/[mdf]/
+var txt1="mohadese"
+//alert(patt1.test(txt))
+var patt2=/[a-h]/
+var txt2="ijkl"
+//alert(patt2.test(txt2))
+var patt3=/[amo]/i // ignore case
+var txt3="MOHADESE"
+//alert(patt3.test(txt3))
+var patt4=/[^abs]/
+var txt4="abs"
+//alert(patt4.test(txt4))
+var patt5=/a.i/
+var txt5="salam ali"
+//alert(patt5.test(txt5))
+var patt6=/\w/// a-z and 0-9 and _ and /\W/=[!/\w/]
+var txt6="$"
+//alert(patt6.test(txt6))
+var patt7=/\d/// 0-9 and /\D/=[!/\d/]
+var txt7="mody77"
+//alert(patt7.test(txt7))
+var patt8=/\s/ // space and /\S/=[!/\s/]
+var txt8="mahadese gharakhanlo"
+//alert(patt8.test(txt8))
+
+
+
+}
+ function testname(){
+   var patt=/[^a-z]/i
+var name=prompt("enter your name:")
+if(!patt.test(name)){
+  alert("your name is valid")
+}else{
+  alert("your name is unvalid")
+  testname()
+}
+ }
+
+var google
+ function window_open(){
+google=window.open("https://www.google.com" ,"","width=500px , height=400px" , "_blank")
+
+ }
+ function window_close(){
+google.close()
+ }
+function time(){
+  var t=new Date()
+  document.getElementById("time").innerHTML= t.toLocaleTimeString()
+}
+setInterval(function(){time()}, 1000)
+function pouse_time(){
+clearInterval(setInterval(function(){time()}, 1000))
+
 }
