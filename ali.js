@@ -16,7 +16,7 @@ function myfunc (par1 , par2){
     return par1*par2;
 }
 var func = myfunc(x,y);
-var person = {      //this is an object containig all the shit niggas
+var object_person = {      //this is an object containig all the shit niggas
     firstname : 'ali',
     lastname : 'pileforooshha',
     age : '20',
@@ -25,6 +25,9 @@ var person = {      //this is an object containig all the shit niggas
         return this.firstname + " " + this.lastname;
     }
 }
+Object.defineProperty(object_person , 'eyecolor' , {value : "blue"})
+console.log(object_person.eyecolor);
+console.log(Object.getOwnPropertyNames(object_person));
 function ShowDate(){
     document.getElementById('func_time').innerHTML=Date();
 }
@@ -129,11 +132,13 @@ function over18Test(value,index,arr){
     return value>18;
 }
 console.log(fruitArr);
-console.log('the index of BANANA in the using indexOf array is '+ fruitArr.indexOf("watermelon"));//shows the index of the searched element lastIndexOf shows the last occurence
+console.log('the index of BANANA  using indexOf array is '+ fruitArr.indexOf("watermelon"));//shows the index of the searched element lastIndexOf shows the last occurence
+console.log(numberArr);
 console.log('the first element with the value more than 30 in numberArr is '+ numberArr.find(over30));//find index returns the index number works the same way
 function over30 (value,index,arr){
     return value>30;
 }
+console.log('the index of the first element over 30 are ' + numberArr.findIndex(over30));
 console.log('the date is '+ new Date());
 console.log('this is a specified date set by me --> '+ new Date(2018,5,21,13,41,54,88));
 console.log('this is the pi number produced by Math.PI' + Math.PI);
@@ -207,3 +212,15 @@ class auto_mobile{
 }
 var ford = new auto_mobile('ford',1983,220);
 console.log(ford.present());
+class auto_mobile_ability extends auto_mobile{
+    constructor(brand,year,top_speed,common_use,door_count){
+        super(brand,year,top_speed);
+        this.common_use = common_use;
+        this.door_count = door_count;
+    }
+    fulluse(){
+        return this.present() + " it can be used for " + this.common_use + " and has " + this.door_count + "doors";
+    }
+}
+var jeep = new auto_mobile_ability('jeep',2020,180,'hill_climbing',4);
+console.log(jeep.fulluse());
