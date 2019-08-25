@@ -17,7 +17,7 @@ function myfunc (par1 , par2){
 }
 var func = myfunc(x,y);
 var object_person = {      //this is an object containig all the shit niggas
-    firstname : 'ali',
+    firstname : 'ali',          
     lastname : 'pileforooshha',
     age : '20',
     height : '180ish',
@@ -61,7 +61,7 @@ console.log(string2);
 //     x = x*x;
 // }
 //var x=0xFF;
-//var number; number.toString(2); returns the number to string to base 2
+//var number; number.toString(2); returns the number to   string to base 2
 var math_number = 9.4291;
 console.log("number 9.4291 with exponential 3 is " + math_number.toExponential(3)); // returns a string
 console.log("number 9.4291 with fixed 3 is " + math_number.toFixed(3)); // returns a string
@@ -224,3 +224,21 @@ class auto_mobile_ability extends auto_mobile{
 }
 var jeep = new auto_mobile_ability('jeep',2020,180,'hill_climbing',4);
 console.log(jeep.fulluse());
+function func_button(){
+    let paragraph1 = document.getElementById("paragraph1");
+    let paragraph1_style = document.getElementById("paragraph1").style;
+    paragraph1.innerHTML = '10px';
+    paragraph1_style.color = 'red';
+    paragraph1_style.margin = '10px';
+    paragraph1_style.borderColor = 'black';
+}
+function mOut(obj){
+    obj.innerHTML="put your mouse over me";
+    obj.style.backgroundColor = "rgb(212, 67, 23)";
+    obj.style.color = "white";
+}
+function mIn(obj){
+    obj.innerHTML="I Love You Baby";
+    obj.style.backgroundColor = "purple";
+    obj.style.color = "red";
+}

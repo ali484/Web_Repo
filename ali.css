@@ -255,6 +255,15 @@ ul.nav-bar li.dropdown:hover .drop-items{
 	/* flex-shrink: 6; */
 	/* flex-grow: 6; */
 }
+#js_paragraph{
+	border-width: 20px;
+	border-style: solid;
+	border-color:black; 
+	width: 200px;
+	height: 200px;
+	/* background-color: #F1FD46; */
+	padding-top:90px;
+}
 /* a{
 	text-decoration: none;
 } */
