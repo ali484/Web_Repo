@@ -1,4 +1,4 @@
-"use strict";
+// "use strict"
 document.getElementById("demo").innerHTML = 5 + 6;
 // alert('hello my friends');
 console.log('this message is written by me and dissplayed in the console');
@@ -242,3 +242,32 @@ function mIn(obj){
     obj.style.backgroundColor = "purple";
     obj.style.color = "red";
 }
+document.getElementById("button_Date").onclick = date_display ;
+function date_display(){
+    document.getElementById("Date_para").innerHTML = Date();
+}
+document.getElementById('EventListener').addEventListener("click",function (){
+    alert("u did that with an event listener");
+});
+document.getElementById('EventListener').addEventListener("mouseover",function (){
+    document.getElementById("eventListenerPara").innerHTML += "you just put your mouse on the button <br>"
+});
+document.getElementById('EventListener').addEventListener("click",function (){
+    document.getElementById("eventListenerPara").innerHTML += "you just clicked the button <br>"
+});
+document.getElementById('EventListener').addEventListener("mouseout",function (){
+    document.getElementById("eventListenerPara").innerHTML += "you just removed your mouse from the button <br>"
+});
+window.addEventListener("resize",function (){
+    document.getElementById("eventListenerPara").innerHTML += Math.random() + "<br>";
+});
+document.getElementById('loveButton').onclick = emopara;
+function emopara(){
+    var para = document.createElement("p");
+    var iLoveYou = document.createTextNode("I LOOOOVVVVEEEE YOOOOUUUUUUUU <br>");
+    document.getElementById('loveDiv').appendChild(para.appendChild(iLoveYou));
+}
+
+
+
+
