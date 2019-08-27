@@ -158,8 +158,56 @@ function time(){
   var t=new Date()
   document.getElementById("time").innerHTML= t.toLocaleTimeString()
 }
-setInterval(function(){time()}, 1000)
-function pouse_time(){
-clearInterval(setInterval(function(){time()}, 1000))
+var settime=setInterval(function(){time()}, 1000)
+  var testtime=true
+function pouse_time(btn){
+
+ // if(testtime==true){
+clearInterval(settime)
+testtime=false
+//btn.value="play"
+//alert(testtime)
+  
+ /* else{
+    testtime=true
+    btn.value"pouse"
+   var settime=setInterval(function(){time()}, 1000)
+   // alert(testtime)
+  }*/
+}
+document.getElementById("addeventlistener").addeventlistener("click" , function(){
+ // var newtag=document.createElement("p")
+  //var text=newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
+  document.getElementById("addevent").innerHTML+="سلام"
+
+})
+
+
+var students= new Array()
+function addstudent(){
+var i=0
+var fname=prompt("enter your name:")
+var lname=prompt("enter your lname:")
+var age=prompt("enter your age:")
+var student={firstname:fname , lastname:lname , age:age}
+students[i++]=student
+}
+
+function showstudent(){
+var table="</table width:'300' border:'1'><tr><td>firstname</td><td>lastname</td><td>age</td></tr>"
+for(var i=0 ; i<=students.length ; i++){
+ table+="<tr>"
+ table+="<td>" + students[i].firstname +"</td>"
+ table+="<td>" + students[i].lastname + "</td>"
+ table+="<td>" + students[i].age + "</td>"
+ table+="</tr>"
+}
+ table+="</table>"
+ document.getElementById("table").innerHTML= table
+ /*for(var i=0 ;i<students.length ; i++){
+   var test={firstname:students[i].firstname , lastname:students[i].lastname , age:students[i].age}
+
+ }*/
+ 
 
 }
