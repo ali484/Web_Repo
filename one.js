@@ -183,7 +183,7 @@ document.getElementById("addeventlistener").addeventlistener("click" , function(
 })
 
 
-var students= [];
+/*var students= [];
 var i=0;
 var table="<table width:'300px' border:'10px'><tr><td>firstname</td><td>lastname</td><td>age</td></tr>";
 function addstudent(){
@@ -214,5 +214,46 @@ table+="</table>";
  /*for(var i=0 ;i<students.length ; i++){
    var test={firstname:students[i].firstname , lastname:students[i].lastname , age:students[i].age}
  }*/
+
+var students = new Array();
+var i=0;
+function addstudent(){
+var fname=prompt("enter your name:");
+var lname=prompt("enter your lname:");
+var age=prompt("enter your age:")
+var std={firstname:fname , lastname:lname , age:age};
+students[i]=std;
+i++
+//console.log(i)
+}
+function test(){
+alert(students[0].firstname)
 }
 
+
+var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
+
+function showstudent(){
+//var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
+for(var i=0 ; i<=students.lenght ; ++i){
+  table+="<tr>"
+  table+="<th>" + students[i].firstname +"</th>"
+  table+="<th>" + students[i].lastname +"</th>"
+  table+="<th>" + students[i].age +"</th>"
+  table+="</tr>"
+}
+table+="</table>"
+document.getElementById("table").innerHTML= table +"hello";
+
+}
+
+function factorial(){
+var number=eval(prompt("enter number:"));
+ var fac=1;
+for(var i=1 ; i<=number ;i++ ){
+ 
+  fac=fac*i
+}
+alert(fac);
+
+}
