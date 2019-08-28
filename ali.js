@@ -267,7 +267,24 @@ function emopara(){
     var iLoveYou = document.createTextNode("I LOOOOVVVVEEEE YOOOOUUUUUUUU <br>");
     document.getElementById('loveDiv').appendChild(para.appendChild(iLoveYou));
 }
-
-
-
-
+console.log('the height of window using window.innerHeight is : ' + window.innerHeight);
+console.log('the width of window using window.innerWidth is : ' + window.innerWidth);
+var myWindow;
+function openwindowfunc() {
+    myWindow = window.open("" ,"myWindow" , "width=200 , height=300");
+    myWindow.document.write("<p>This is 'myWindow'</p>");
+}
+function closewindowfunc() {
+    myWindow.close();
+}
+function movewindowfunc(){
+    myWindow.moveTo(500,100);
+    myWindow.focus();
+}
+function resizewindowfunc(){
+    myWindow.resizeTo(800,900);
+    myWindow.focus();
+}
+console.log(screen.width);
+console.log(screen.height);
+console.log(screen.availWidth);
