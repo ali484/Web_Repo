@@ -175,76 +175,35 @@ testtime=false;
    // alert(testtime)
   }*/
 }
-document.getElementById("addeventlistener").addeventlistener("click" , function(){
- // var newtag=document.createElement("p")
-  //var text=newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
-  document.getElementById("addevent").innerHTML+="سلام";
+document.getElementById("addeventlistener").addEventListener("click" , function(){
+  var newtag=document.createElement("p")
+ newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
+ document.getElementById("addevent").appendChild(newtag)
+  
 
 })
-
-
-/*var students= [];
-var i=0;
-var table="<table width:'300px' border:'10px'><tr><td>firstname</td><td>lastname</td><td>age</td></tr>";
-function addstudent(){
-var fname=prompt("enter your name:");
-console.log(fname);
-var lname=prompt("enter your lname:");
-console.log(lname);
-var age=prompt("enter your age:");
-console.log(age);
-var student = {firstname:fname , lastname:lname , age:age};
-console.log(student.firstname);
-// students.push(student);
-// students[i]=student;
- table+="<tr>";
- table+="<td>" + student.firstname +"</td>" + "?";
- table+="<td>" + student.lastname + "</td>" + "?";
- table+="<td>" + student.age + "</td>" + "?";
- table+="</tr>" + "<br>";
-
-// console.log(students[i].firstname);
-// console.log(students[i].lastname);
-// console.log(students[i].age);
-i++;
-}
-function showstudent(){
-table+="</table>";
- document.getElementById("table").innerHTML= table + "hello";
- /*for(var i=0 ;i<students.length ; i++){
-   var test={firstname:students[i].firstname , lastname:students[i].lastname , age:students[i].age}
- }*/
-
-var students = new Array();
+var std=new Array()
 var i=0;
 function addstudent(){
 var fname=prompt("enter your name:");
-var lname=prompt("enter your lname:");
-var age=prompt("enter your age:")
-var std={firstname:fname , lastname:lname , age:age};
-students[i]=std;
+var lname=prompt("lname?")
+var age=prompt("age?")
+var student={fname:fname , lname:lname , age:age}
+std[i]=student;
 i++
-//console.log(i)
+
 }
-function test(){
-alert(students[0].firstname)
-}
-
-
-var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
-
 function showstudent(){
-//var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
-for(var i=0 ; i<=students.lenght ; ++i){
+var table="<table><tr><th>fname</th><th>lname</th><th>age</th></tr>"
+for(var j=0 ; j<std.length ; j++){
   table+="<tr>"
-  table+="<th>" + students[i].firstname +"</th>"
-  table+="<th>" + students[i].lastname +"</th>"
-  table+="<th>" + students[i].age +"</th>"
+  table+="<th>" + std[j].fname + "</th>"
+   table+="<th>" + std[j].lname + "</th>"
+    table+="<th>" + std[j].age + "</th>"
   table+="</tr>"
 }
 table+="</table>"
-document.getElementById("table").innerHTML= table +"hello";
-
+document.getElementById("table").innerHTML=table
 }
 
 function factorial(){
@@ -257,3 +216,22 @@ for(var i=1 ; i<=number ;i++ ){
 alert(fac);
 
 }
+
+function addtotable(){
+  var fname=document.getElementById("Fname").value;
+  var lname=document.getElementById("Lname").value;
+
+  var trtag=document.createElement("tr");
+  var tdtagf=document.createElement("td");
+  tdtagf.innerHTML=fname;
+  var tdtagl=document.createElement("td");
+  tdtagl.innerHTML=lname;
+  
+  trtag.appendChild(tdtagf);
+  trtag.appendChild(tdtagl);
+
+  document.getElementById("person").appendChild(trtag);
+
+
+}
+
