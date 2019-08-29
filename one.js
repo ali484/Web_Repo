@@ -175,12 +175,12 @@ testtime=false;
    // alert(testtime)
   }*/
 }
-document.getElementById("addeventlistener").addeventlistener("click" , function(){
+document.getElementById("addeventlistener").addEventListener("click" , function(){
  // var newtag=document.createElement("p")
   //var text=newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
   document.getElementById("addevent").innerHTML+="سلام";
 
-})
+});
 
 
 /*var students= [];
@@ -215,19 +215,28 @@ table+="</table>";
    var test={firstname:students[i].firstname , lastname:students[i].lastname , age:students[i].age}
  }*/
 
-var students = new Array();
+var students = [];
 var i=0;
+var std={firstname:'' , lastname:'' , age:''};
+var fname;
+var lname;
+var age;
+document.getElementById('addbutton').onclick = addstudent;
+document.getElementById('showbutton').onclick = showstudent;
+document.getElementById('testbutton').onclick = test21;
 function addstudent(){
-var fname=prompt("enter your name:");
-var lname=prompt("enter your lname:");
-var age=prompt("enter your age:")
-var std={firstname:fname , lastname:lname , age:age};
-students[i]=std;
-i++
+  fname = prompt("enter your name:");
+  lname = prompt("enter your lname:");
+  age = prompt("enter your age:");
+std.firstname = fname;
+std.lastname = lname;
+std.age = age;
+students.push(std);
+i++;
 //console.log(i)
 }
-function test(){
-alert(students[0].firstname)
+function test21(){
+console.log(students[0].firstname);
 }
 
 
@@ -235,18 +244,17 @@ var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
 
 function showstudent(){
 //var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
-for(var i=0 ; i<=students.lenght ; ++i){
-  table+="<tr>"
-  table+="<th>" + students[i].firstname +"</th>"
-  table+="<th>" + students[i].lastname +"</th>"
-  table+="<th>" + students[i].age +"</th>"
-  table+="</tr>"
-}
-table+="</table>"
-document.getElementById("table").innerHTML= table +"hello";
+  for(var i=0 ; i<students.lenght ; i++){
 
+    table+="<tr>"
+    table+="<td>" + students[i].firstname +"</td>"
+    table+="<td>" + students[i].lastname +"</td>"
+    table+="<td>" + students[i].age +"</td>"
+    table+="</tr>"
 }
-
+table +="</table>"
+document.getElementById("table21").innerHTML= table ;
+}
 function factorial(){
 var number=eval(prompt("enter number:"));
  var fac=1;
