@@ -288,3 +288,27 @@ function resizewindowfunc(){
 console.log(screen.width);
 console.log(screen.height);
 console.log(screen.availWidth);
+console.log('the location of the current page'+window.location.href);
+console.log('the host name is : '+window.location.hostname);
+console.log('the path-name is : '+window.location.pathname);
+console.log('the protocol is : '+window.location.protocol);
+function opengoogle(){
+    window.location.assign('https://google.com');
+}
+function confirmation(){
+    if(confirm('are u male?')){
+        console.log("he is a man");
+    }else{
+        console.log('definitely not a man');
+    }
+}
+function namequiz(){
+    prompt('whats your name?','ali!');
+}
+var JSONFILE = '{"name":"ali","lname":"pileforooshha","age":20}'
+var JSON_OBJ = JSON.parse(JSONFILE); // turns a string into an object which is cool af
+console.log(JSON_OBJ.name);
+console.log(JSON_OBJ.lname);
+console.log(JSON_OBJ.age);
+var JSONTEXT = JSON.stringify(object_Ali);
+console.log(JSONTEXT);

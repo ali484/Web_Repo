@@ -176,6 +176,7 @@ testtime=false;
   }*/
 }
 document.getElementById("addeventlistener").addEventListener("click" , function(){
+<<<<<<< HEAD
   var newtag=document.createElement("p")
  newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
  document.getElementById("addevent").appendChild(newtag)
@@ -183,17 +184,84 @@ document.getElementById("addeventlistener").addEventListener("click" , function(
 
 })
 var std=new Array()
+=======
+ // var newtag=document.createElement("p")
+  //var text=newtag.innerHTML="دامش ندیدم ناگهان در وی گرفتار اومدم"
+  document.getElementById("addevent").innerHTML+="سلام";
+
+});
+
+
+/*var students= [];
+>>>>>>> 8453fdb42a94e9e3aec7815fbf5a72f4431953d1
 var i=0;
 function addstudent(){
 var fname=prompt("enter your name:");
+<<<<<<< HEAD
 var lname=prompt("lname?")
 var age=prompt("age?")
 var student={fname:fname , lname:lname , age:age}
 std[i]=student;
 i++
+=======
+console.log(fname);
+var lname=prompt("enter your lname:");
+console.log(lname);
+var age=prompt("enter your age:");
+console.log(age);
+var student = {firstname:fname , lastname:lname , age:age};
+console.log(student.firstname);
+// students.push(student);
+// students[i]=student;
+ table+="<tr>";
+ table+="<td>" + student.firstname +"</td>" + "?";
+ table+="<td>" + student.lastname + "</td>" + "?";
+ table+="<td>" + student.age + "</td>" + "?";
+ table+="</tr>" + "<br>";
+
+// console.log(students[i].firstname);
+// console.log(students[i].lastname);
+// console.log(students[i].age);
+i++;
+}
+function showstudent(){
+table+="</table>";
+ document.getElementById("table").innerHTML= table + "hello";
+ /*for(var i=0 ;i<students.length ; i++){
+   var test={firstname:students[i].firstname , lastname:students[i].lastname , age:students[i].age}
+ }*/
+
+var students = [];
+var i=0;
+var std={firstname:'' , lastname:'' , age:''};
+var fname;
+var lname;
+var age;
+document.getElementById('addbutton').onclick = addstudent;
+document.getElementById('showbutton').onclick = showstudent;
+document.getElementById('testbutton').onclick = test21;
+function addstudent(){
+  fname = prompt("enter your name:");
+  lname = prompt("enter your lname:");
+  age = prompt("enter your age:");
+std.firstname = fname;
+std.lastname = lname;
+std.age = age;
+students.push(std);
+i++;
+//console.log(i)
+}
+function test21(){
+console.log(students[0].firstname);
+}
+
+
+var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
+>>>>>>> 8453fdb42a94e9e3aec7815fbf5a72f4431953d1
 
 }
 function showstudent(){
+<<<<<<< HEAD
 var table="<table><tr><th>fname</th><th>lname</th><th>age</th></tr>"
 for(var j=0 ; j<std.length ; j++){
   table+="<tr>"
@@ -204,8 +272,20 @@ for(var j=0 ; j<std.length ; j++){
 }
 table+="</table>"
 document.getElementById("table").innerHTML=table
-}
+=======
+//var table="<table><tr><th>firstname</th><th>lastname</th><th>age</th></tr>"
+  for(var i=0 ; i<students.lenght ; i++){
 
+    table+="<tr>"
+    table+="<td>" + students[i].firstname +"</td>"
+    table+="<td>" + students[i].lastname +"</td>"
+    table+="<td>" + students[i].age +"</td>"
+    table+="</tr>"
+}
+table +="</table>"
+document.getElementById("table21").innerHTML= table ;
+>>>>>>> 8453fdb42a94e9e3aec7815fbf5a72f4431953d1
+}
 function factorial(){
 var number=eval(prompt("enter number:"));
  var fac=1;
