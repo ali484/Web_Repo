@@ -312,3 +312,5 @@ console.log(JSON_OBJ.lname);
 console.log(JSON_OBJ.age);
 var JSONTEXT = JSON.stringify(object_Ali);
 console.log(JSONTEXT);
+var input_string = document.getElementById('inputstr');
+console.log(input_string);
