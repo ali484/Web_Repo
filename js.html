@@ -63,9 +63,24 @@
                  border-style: solid;
 
              }
+             #check{
+                 width: 200px;
+                 height: 300px;
+                 border-style: solid;
+             }
+             #check_box{
+                 margin-left: 6px;
+                 margin-top: 3px;
+                 width: 180px;
+                 height: 50px;
+                 border-style: solid;
+                 font-size: 30px;
+                text-align: center;
+             }
+             #slideshow img{
+                 display: none;
+             }
              
-             
-
         </style>
         
     </head>
@@ -138,11 +153,29 @@ last name <input type="text" id="Lname" />
         <th>first name</th>
         <th>last name</th>
         <th>operation</th>
+        <th><input type="checkbox" id="chkall" onclick="chkall_click(this)" /> </th>
     </tr>
 
 </table>
 </div>
 <br /><br /><br /><br /><br />
+<div id="check">
+    <div id="check_box">
+        checkbox
+    </div>
+    I have car <input type="checkbox" id="firstbox" onclick="firstcheckbox()" /><hr />
+    I have bike <input type="checkbox" id="secondbox" onclick="secondcheckbox()" /><hr />
+    I have both <input type="checkbox" id="thirdbox" onclick="thirdcheckbox()" />
+
+
+</div><br /><br /><br /><br /><br />
+
+<div id="slideshow">
+    <img src="index.jpg" id="imgone"/>
+    <img src="index2.jpg" id="imgone"/>
+    <img src="index3.jpg" id="imgone"/>
+    
+</div><br /><br /><br /><br /><br />
    <script src="one.js" type="text/javascript">
   
    </script>

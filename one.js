@@ -267,14 +267,16 @@ function addtotable(btn){
 
     }
     var space=document.createTextNode("  ");
-  tdope.appendChild(dellink);
-  tdope.appendChild(space);
-  tdope.appendChild(editlink);
-
+       tdope.appendChild(dellink);
+       tdope.appendChild(space);
+       tdope.appendChild(editlink);
+    var tdchk=document.createElement("td")
+      tdchk.innerHTML="<input type='checkbox' onclick='chk_click(this)' />"
 
     trtag.appendChild(tdfname);
     trtag.appendChild(tdlname);
     trtag.appendChild(tdope);
+    trtag.appendChild(tdchk);
     document.getElementById("person").appendChild(trtag);
   }
   else{
@@ -296,4 +298,85 @@ function edittrtag(trtag){
   document.getElementById("Lname").value=trtag.childNodes[1].innerHTML;
   document.getElementById("personbtn").value="modify";
 
+}
+
+function chkall_click(chk){
+  var table=document.getElementById("person");
+ // alert(table.childNodes.length);
+  if(chk.checked){
+    for(var i=2 ; i<=table.childNodes.length ; i++){
+      table.childNodes[i].childNodes[3].childNodes[0].checked="checked";
+    }
+  }
+  else
+    for(var i=2 ; i<=table.childNodes.length ; i++){
+       table.childNodes[i].childNodes[3].childNodes[0].checked="";
+    }
+
+}
+function chk_click(chk){
+   var table=document.getElementById("person");  
+   var boxes=table.getElementsByTagName("input");
+   
+  if(!chk.checked){
+    document.getElementById("chkall").checked="";
+  }
+  /*else{
+    for(var i=0 ; i<=boxes.length ; i++){
+      if(boxes[i].checked){
+        continue;
+      }
+      else{
+        break;
+      } 
+    }
+    if(i==boxes.length){
+        document.getElementById("chkall").checked="checked";
+      }
+  }*/
+  
+  
+}
+function firstcheckbox(){
+  var Secondbox=document.getElementById("secondbox");
+  if(Secondbox.checked){
+    document.getElementById("thirdbox").checked="checked";
+  }
+
+}
+function secondcheckbox(){
+  var Firstbox=document.getElementById("firstbox");
+  if(Firstbox.checked){
+   document.getElementById("thirdbox").checked="checked";
+  }
+
+}
+function thirdcheckbox(){
+  var Thirdbox=document.getElementById("thirdbox")
+  if(Thirdbox.checked){
+    document.getElementById("firstbox").checked="checked";
+    document.getElementById("secondbox").checked="checked";
+
+  }
+
+}
+var divslide=document.getElementById("slideshow");
+//alert(divslide.childNodes.length);
+setInterval(function(){slideshow()} , 1000);
+function slideshow(){
+  var divslide=document.getElementById("slideshow");
+  /*var index=1;
+  if(index==1){
+    for(var i=1 ; i<divslide.childNodes.length ; i=i+2){
+      divslide.childNodes[i].style.display="inline";
+    }
+    index=0;
+  }
+  if(index==0){
+    for(var i=1 ; i<divslide.childNodes.length ; i=i+2){
+      divslide.childNodes[i].style.display="none";
+    }
+    index=1;
+  }*/
+  
 }
