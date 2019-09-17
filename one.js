@@ -273,7 +273,7 @@ function addtotable(btn){
     var tdchk=document.createElement("td")
       tdchk.innerHTML="<input type='checkbox' onclick='chk_click(this)' />"
 
-    trtag.appendChild(tdfname);
+    trtag.appendChild(tdfname);dddddddd
     trtag.appendChild(tdlname);
     trtag.appendChild(tdope);
     trtag.appendChild(tdchk);
