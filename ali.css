@@ -262,36 +262,89 @@ tr{
 /*                                                     */
 /*                                                     */
 .card{
+	position: relative;
 	margin-top: 200px;
-	width: 300px;
-	height: 400px;
-	border:1px solid black;
-	border-radius: 10%;
-	box-shadow: 2px 2px 1px #bbbbbb;
+	width: 450px;
+	height: 800px;
+	background-color: rgb(250, 232, 233);
+	border:1px solid rgb(241, 227, 227);
+	/* border-radius: 5%; */
+	box-shadow: 2px 2px 1px #bbbbbb , -2px -2px 1px #bbbbbb;
+}
+.img-text{
+	color: white;
+}
+.img-middle{
+	position: absolute;
+	left: 30%;
+	bottom: 50%;
+	border-radius: 8px;
+	word-spacing: 5px;
+	padding: 16px 32px;
+	/* background-color: #4CAF50; */
+	background-image: linear-gradient(#165e04,#1d8010);
+	opacity: 0;
+}
+.card-img-div{
+	width:inherit;
+	height: 70%;
+	position: relative;
 }
 .card-img{
-	width: 100%;
-	height: 50%;
-	border-radius: 10% 10% 0% 0%;
+	width: inherit;
+	border-spacing: 10px;
+	height: 100%;
+	/* border-radius: 5% 5% 0% 0%; */
 	border:1px solid black;
 }
 .card-container{
+	position: absolute;
+	left: 15px;
 	border-radius: 0% 0% 10% 10%;
-	background-color: #fa1f1f;
 	text-align: center;
-	padding-bottom:40%;
+	padding: 10px 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.card-button{
+	border-radius: 15%;
+	border:1px white solid;
+	background-color:rgb(227, 231, 225);
+	width: 80px;
+	height: 40px;
+	box-shadow: 4px 4px 3px rgba(167, 185, 161, 0.900);
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	z-index: 1;
+}
+.card-img-div:hover .card-img{
+	opacity: 0.5;
+}
+.card-middle-text{
+	opacity: 0;
+}
+.card-img-div:hover .img-middle{
+	opacity:1;
+}
+.overlay{
+	width: inherit;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+	background-color: rgb(58, 137, 240);
+	transition-duration: 1s;
+}
+.overlay-text{
+	color: white;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+}
+.card-img-div:hover .overlay{
+	opacity: 1;
+}
 /*                                                     */
 /*                                                     */
 /*                         Cards                       */
@@ -490,4 +543,12 @@ footer{
 	height: 100px;
 	margin-top:150px;
 	text-align: center;
+}
+button{
+	cursor: pointer;
+}
+button:focus{
+	/* makes that light blue border go away */
+	outline: none;
+	border: none;
 }
