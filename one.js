@@ -283,6 +283,7 @@ function addtotable(btn){
      selectedtrtag.childNodes[0].innerHTML=fname;
      selectedtrtag.childNodes[1].innerHTML=lname;
      selectedtrtag.style.backgroundColor="white";
+     document.getElementById("personbtn").value="addtotable"
 
   }
 
