@@ -1,13 +1,13 @@
 body{
 	/* background-color: #D8D6D3; */
-	margin: 16px;
+	/* margin: 16px; */
 	background-color: rgb(255, 255, 255);
 	/* background-image: url("Lebron\ Sketch.jpg") ; */
 	/* background-repeat: no-repeat; */
 	/* background-attachment: fixed; */
 	/* background-position: center; */
 	/* background-position-y: 20px; */
-	/* background-size: 400px; */
+	/* background-size: 400px; cover*/
 	/*background-image: linear-gradient(yellow,#D8D6D3);*/
 	/*background-image: url("photo.jpg");*/
 	/* background-repeat: no-repeat; */
@@ -16,9 +16,33 @@ body{
 	/* background: #ffffff url("img_tree.png") no-repeat right top; */
 	/* background-repeat: repeat-x //the background will be repeated only horizontally// */
 	/* display: block; */
+	/* background-origin: border-box , content-box , padding-box */
 	color: rgb(85, 82, 82);
 	font-size: 20px;
 	text-shadow: 10cm;
+	box-sizing: border-box;
+}
+.boxshadow{
+	box-shadow: 8px 8px 4px rgba(197, 211, 10, 0.904) , 4px 4px rgba(219, 3, 3, 0.418);
+}
+.horizon-center{
+	padding-top: 30%;
+}
+.shadow_around{
+	color: black;
+	text-shadow: 1px 0px gold , -1px 0px gold , 0px 1px gold , 0px -1px gold;
+}
+.corneredborder1{
+	border-radius: 50px 50px 50px 0px;
+	background-color: rgb(44, 216, 53);
+	width: 200px;
+	height: 150px;
+}
+.corneredborder2{
+	border-radius: 50px 0px 50px 0px;
+	background-color: rgb(44, 216, 53);
+	width: 200px;
+	height: 150px;
 }
 article{
 	text-align: center;
@@ -108,6 +132,7 @@ ul.nav-bar li.dropdown:hover .drop-items{
 	/* border-style: solid; */
 	border-radius: 12%;
 	border-bottom: 6px solid red;
+	padding-bottom: 16px;
 	/* overflow-x: auto; */
 	/* border-collapse:  */
 	/* border-bottom-width: 8px; */
@@ -140,12 +165,157 @@ tr{
 	text-indent: 70px;
 	letter-spacing: 3px;
 	line-height: 45px;
+	font-weight: bold;
 	word-spacing: 10px;
 	overflow:auto;
 	/* overflow:hidden; */
 	/* overflow:visible; */
-	/* text-overflow: clip; */
+	/* text-overflow: clip; ellipsis visible*/
 	/* outline-color: aqua; */
+}
+.circle{
+	width: 200px;
+	height: 200px;
+	border-radius: 30%;
+	/* background-image: linear-gradient(red , white); */
+	background-color: crimson;
+}
+/*                                                     */
+/*                                                     */
+/*                         TOOLTIP                     */
+/*                                                     */
+/*                                                     */
+.tooltip{
+	position: relative;
+	display: inline-block;
+}
+.tooltip .tooltiptext{
+	visibility: hidden;
+	color: white;
+	width: 120px;
+	background-color: navy;
+	position: absolute;
+	z-index: 1;
+	border-radius: 40%;
+	top:-120%;
+	left: 105%;
+}
+.tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+/*                                                     */
+/*                                                     */
+/*                         TOOLTIP                     */
+/*                                                     */
+/*                                                     */
+
+
+/*             -----------------------------------------------------------------------------------------------------          */                         
+
+
+/*                                                     */
+/*                         ANIMATION                   */
+/*                                                     */
+/*                                                     */
+@keyframes animation1{
+	from{background-color: chartreuse;}
+	to{background-color: deepskyblue;}
+}
+.moving-square{
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	position: relative;
+	animation-name: animation2;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	animation-timing-function: ease-in-out;
+}
+@keyframes animation2{
+	0%{left:0px; top:0px;}
+	25%{left:200px; top:0px;}
+	50%{left:200px; top:200px;}
+	75%{left:0px; top:200px;}
+	100%{left:0px; top:0px;}
+}
+.rect{
+	width: 400px;
+	height: 100px;
+	background-color: chartreuse;
+	animation-name: animation1;
+	animation-duration: 3s;
+}
+/*                                                     */
+/*                                                     */
+/*                         ANIMATION                   */
+/*                                                     */
+/*                                                     */
+
+
+/*             -----------------------------------------------------------------------------------------------------          */                         
+
+
+/*                                                     */
+/*                                                     */
+/*                         Cards                       */
+/*                                                     */
+/*                                                     */
+.card{
+	margin-top: 200px;
+	width: 300px;
+	height: 400px;
+	border:1px solid black;
+	border-radius: 10%;
+	box-shadow: 2px 2px 1px #bbbbbb;
+}
+.card-img{
+	width: 100%;
+	height: 50%;
+	border-radius: 10% 10% 0% 0%;
+	border:1px solid black;
+}
+.card-container{
+	border-radius: 0% 0% 10% 10%;
+	background-color: #fa1f1f;
+	text-align: center;
+	padding-bottom:40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*                                                     */
+/*                                                     */
+/*                         Cards                       */
+/*                                                     */
+/*                                                     */
+.circle:hover{
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transform: rotate(360deg); /*translate(right,bottom) scale(time of width,times of height) */
+	/* background-image: linear-gradient(violet , white); */
+	background-color: linear-gradient(violet , white) ;
+}
+.border{
+	border: 2px black solid;
+}
+.dimension{
+	width: 300px;
+	height: 300px;
+}
+.overflow-hidden{
+	word-break: keep-all;
+	white-space:pre-wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 #music{
 	padding: 5px;
@@ -283,6 +453,12 @@ tr{
 /* a{
 	text-decoration: none;
 } */
+.text-center{
+	text-align: center;
+}
+.mt{
+	margin-top:20px;
+}
 a{
 	text-decoration: none;
 	color: rgb(212, 75, 75);
@@ -305,4 +481,13 @@ tr:hover{
 }
 html{
 	scroll-behavior:smooth;
+}
+footer{
+	padding-top: 70px;
+	font-size: 20px;
+	color: white;
+	background-image: linear-gradient(to left , rgba(255,0,0,0), rgba(255,0,0,1));
+	height: 100px;
+	margin-top:150px;
+	text-align: center;
 }
