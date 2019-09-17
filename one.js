@@ -361,23 +361,31 @@ function thirdcheckbox(){
   }
 
 }
-var divslide=document.getElementById("slideshow");
+
 //alert(divslide.childNodes.length);
-setInterval(function(){slideshow()} , 1000);
+/*setInterval(function(){slideshow()} , 1000);
 function slideshow(){
   var divslide=document.getElementById("slideshow");
-  /*var index=1;
-  if(index==1){
-    for(var i=1 ; i<divslide.childNodes.length ; i=i+2){
-      divslide.childNodes[i].style.display="inline";
-    }
-    index=0;
+  for(var i=1 ; i<divslide.childNodes.length ; i=i+2){
+    divslide.childNodes[i].style.display="inline";
+    //divslide.childNodes[i].style.display="none";
   }
-  if(index==0){
-    for(var i=1 ; i<divslide.childNodes.length ; i=i+2){
-      divslide.childNodes[i].style.display="none";
-    }
-    index=1;
-  }*/
+}*/
+ var numberimg=0;
+function shownext(){
+  var image=new Array("index2.jpg","index.jpg","index4.jpg","index3.jpg");
+  
+  if(numberimg==0){
+     document.getElementById("firstimg").src=image[numberimg];
+     numberimg++; 
+   }
+   else if(numberimg<image.length && numberimg>0){
+     document.getElementById("firstimg").src=image[numberimg];
+     numberimg++;
+   } 
+  else{
+     document.getElementById("firstimg").src=image[numberimg];
+     numberimg=0;
+   }
   
 }
