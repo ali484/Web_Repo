@@ -372,9 +372,8 @@ function slideshow(){
   }
 }*/
  var numberimg=0;
+ var image=new Array("index2.jpg","index.jpg","index4.jpg");
 function shownext(){
-  var image=new Array("index2.jpg","index.jpg","index4.jpg","index3.jpg");
-  
   if(numberimg==0){
      document.getElementById("firstimg").src=image[numberimg];
      numberimg++; 
@@ -383,9 +382,29 @@ function shownext(){
      document.getElementById("firstimg").src=image[numberimg];
      numberimg++;
    } 
-  else{
-     document.getElementById("firstimg").src=image[numberimg];
+  else if(numberimg==image.length){
+     document.getElementById("firstimg").src="index3.jpg";
      numberimg=0;
-   }
-  
+   }  
 }
+var imagepre=new Array("index2.jpg","index.jpg","index4.jpg","index3.jpg");
+function showprevious(){
+   if(numberimg==0){
+     document.getElementById("firstimg").src="index4.jpg";
+     numberimg=image.length-1
+     
+   }
+   else if(numberimg<imagepre.length && numberimg>0){
+     numberimg=numberimg-1;
+     document.getElementById("firstimg").src=imagepre[numberimg];
+     
+   }
+   else{
+     numberimg=0;
+     document.getElementById("firstimg").src=imagepre[numberimg];
+     
+    }
+}
+
+
+
