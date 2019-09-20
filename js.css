@@ -74,4 +74,22 @@ table{
      font-size: 30px;
     text-align: center;
  }
- 
+#slide img{
+    width: 300px;
+    height: 300px;
+    display: none;
+}
+#slide img:first-child{
+    display: inline;
+}
+#slideshow{
+    float: left;
+}
+#slide{
+    float: left;
+    margin-left: 50px;
+}
+#slideshow img{
+    width: 300px;
+    height: 300px;
+}

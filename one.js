@@ -405,6 +405,36 @@ function showprevious(){
      
     }
 }
+setInterval(function(){slider()} , 2000);
+index=0;
+function slider(){
+   var slides=document.getElementById("slide").getElementsByTagName("img");
+   /*if(index==0){
+     slides[index].style.display="none";
+     slides[index+1].style.display="inline";
+     index++;
+   }
+   else if(index>0 && index<slides.length){
+      slides[index].style.display="none";
+      slides[index+1].style.display="inline";
+      index++;
+   }
+   else if(index==slides.length){
+     slides[index].style.display="none";
+     slides[0].style.display="inline";
+     index=0;
+    
+   }*/
+   for(var i=0;i<=slides.length;i++){
+     slides[i].style.display="none";
+     if(i==slides.length){
+       slides[0].style.display="inline";
+     }
+     else{
+     slides[i+1].style.display="inline";
+     }
+   }
+}
 
 
 
