@@ -404,9 +404,12 @@ function showprevious(){
      document.getElementById("firstimg").src=imagepre[numberimg];
      
     }
-}
+}    
+var sssssdddddddddwww = setInterval(shownext , 2000);
+index=0;
+
 var index=0;
-setInterval(function(){slider()} , 2000);
+setInterval(shownext , 2000);
 
 function slider(){
    
