@@ -404,8 +404,8 @@ function showprevious(){
      document.getElementById("firstimg").src=imagepre[numberimg];
      
     }
-}
-var sssss = setInterval(shownext , 2000);
+}    
+var sssssdddddd = setInterval(shownext , 2000);
 index=0;
 function slider(){
    var slides=document.getElementById("slide").getElementsByTagName("img");
