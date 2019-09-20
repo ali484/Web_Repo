@@ -421,7 +421,7 @@ tr{
 	flex-direction: column;
 	background-color: aqua;
 	flex-wrap: wrap;/*wrap-reverse    no-wrap*/
-	justify-content: center;/*horizontally     flex-start     flex-end     space-around     space-between*/
+	justify-content: center;/* flex-start     flex-end     space-around     space-between*/
 	align-items: center; /*vertically    flex-start    stretch    baseline */
 }
 
