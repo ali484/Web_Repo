@@ -438,6 +438,3 @@ function slider(){
      
    }*/
 }
-
-
-
