@@ -405,7 +405,7 @@ function showprevious(){
      
     }
 }    
-var sssssdddddd = setInterval(shownext , 2000);
+var sssssdddddddddwww = setInterval(shownext , 2000);
 index=0;
 function slider(){
    var slides=document.getElementById("slide").getElementsByTagName("img");
