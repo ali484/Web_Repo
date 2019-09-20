@@ -296,6 +296,7 @@ tr{
 	height: 100%;
 	/* border-radius: 5% 5% 0% 0%; */
 	border:1px solid black;
+	object-fit: cover;
 }
 .card-container{
 	position: absolute;
@@ -305,16 +306,20 @@ tr{
 	padding: 10px 20px;
 }
 .card-button{
-	border-radius: 15%;
-	border:1px white solid;
+	font-size: 12px;
+	/* border-radius: 15%; */
+	border:1px solid rgba(167, 185, 161, 0.500);
 	background-color:rgb(227, 231, 225);
 	width: 80px;
 	height: 40px;
-	box-shadow: 4px 4px 3px rgba(167, 185, 161, 0.900);
+	/* box-shadow: 4px 4px 3px rgba(167, 185, 161, 0.900); */
 	position: absolute;
 	left: 15px;
 	bottom: 15px;
 	z-index: 1;
+}
+.card-button:hover{
+	box-shadow: 4px 4px 3px rgba(167, 185, 161, 0.900);
 }
 .card-img-div:hover .card-img{
 	opacity: 0.5;
@@ -348,6 +353,93 @@ tr{
 /*                                                     */
 /*                                                     */
 /*                         Cards                       */
+/*                                                     */
+/*                                                     */
+
+
+
+/*             -----------------------------------------------------------------------------------------------------          */                         
+
+
+
+/*                                                     */
+/*                                                     */
+/*                        Buttons                      */
+/*                                                     */
+/*                                                     */
+.black-button{
+	display: inline-block;
+	width: 250px;
+	background-color: #050505;
+	font-size: 28px;
+	padding : 32px 16px;
+	/* border: 1px solid white; */
+	border:none;
+	border-radius: 8px;
+}
+.black-button span{
+	/* background-color: #aaaaaa; */
+	color: #64e054;
+	position:relative;
+	transition-duration: 0.5s;
+}
+.black-button span::after{
+	content: '\00bb';
+	position: absolute;
+	right: -20px;
+	top: 0;
+	opacity: 0;
+	
+}
+.black-button:hover span{
+	padding-right: 25px;
+	
+}
+.black-button:hover span::after{
+	right:0;
+	opacity: 1;
+}
+/*                                                     */
+/*                                                     */
+/*                        Buttons                      */
+/*                                                     */
+/*                                                     */
+
+
+
+/*             -----------------------------------------------------------------------------------------------------          */                         
+
+
+
+/*                                                     */
+/*                                                     */
+/*                        FlexBox                      */
+/*                                                     */
+/*                                                     */
+.flex-container{
+	display:flex;
+	flex-direction: column;
+	background-color: aqua;
+	flex-wrap: wrap;/*wrap-reverse    no-wrap*/
+	justify-content: center;/*horizontally     flex-start     flex-end     space-around     space-between*/
+	align-items: center; /*vertically    flex-start    stretch    baseline */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                                                     */
+/*                                                     */
+/*                        FlexBox                      */
 /*                                                     */
 /*                                                     */
 .circle:hover{
@@ -545,10 +637,10 @@ footer{
 	text-align: center;
 }
 button{
-	cursor: pointer;
+	cursor: pointer;/*not-allowed*/
 }
 button:focus{
 	/* makes that light blue border go away */
 	outline: none;
-	border: none;
+	
 }
