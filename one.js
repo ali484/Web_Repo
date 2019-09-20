@@ -407,9 +407,14 @@ function showprevious(){
 }    
 var sssssdddddddddwww = setInterval(shownext , 2000);
 index=0;
+
+var index=0;
+setInterval(shownext , 2000);
+
 function slider(){
+   
    var slides=document.getElementById("slide").getElementsByTagName("img");
-   /*if(index==0){
+   if(index==0){
      slides[index].style.display="none";
      slides[index+1].style.display="inline";
      index++;
@@ -424,8 +429,8 @@ function slider(){
      slides[0].style.display="inline";
      index=0;
     
-   }*/
-   for(var i=0;i<=slides.length;i++){
+   }
+   /*for(var i=0;i<=slides.length;i++){
      slides[i].style.display="none";
      if(i==slides.length){
        slides[0].style.display="inline";
@@ -433,7 +438,8 @@ function slider(){
      else{
      slides[i+1].style.display="inline";
      }
-   }
+     
+   }*/
 }
 
 
