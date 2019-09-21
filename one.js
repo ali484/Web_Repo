@@ -441,6 +441,3 @@ function slider(){
      
    }*/
 }
-
-
-
