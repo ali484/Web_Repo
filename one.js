@@ -426,3 +426,26 @@ function slider(){
     
    }
 }
+function sltdisable(chkslt){
+
+   if(chkslt.checked){
+     document.getElementById("sltperson").disabled="disabled";
+   }
+   else{
+     document.getElementById("sltperson").disabled="";
+   }
+}
+function changeoption(){
+   var index=document.getElementById("sltperson").selectedIndex;
+   var name=prompt("enter your name?");
+   var condition=confirm("are you sure?");
+   if(condition==true){
+     document.getElementById("sltperson").options[index].text=name;
+   }
+}
+function removeoption(){
+  var index=document.getElementById("sltperson").selectedIndex;
+   if(confirm("are you sure?")){
+     document.getElementById("sltperson").options.remove(index);
+   }
+}
