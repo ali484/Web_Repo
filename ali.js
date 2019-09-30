@@ -314,3 +314,5 @@ var JSONTEXT = JSON.stringify(object_Ali);
 console.log(JSONTEXT);
 var input_string = document.getElementById('inputstr');
 console.log(input_string);
+var personn = 'ali';
+console.log('hello ${personn}')

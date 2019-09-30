@@ -1,0 +1,35 @@
+cd:for changing directory
+
+pwd:for seeing the directory u are working on
+
+git add:for adding and tracking new files
+
+git status: for showing everything
+
+git add -A:adds everything
+
+git commit -m:commits and puts a message for it in ''
+
+to exit commit message mode hit ask and then type :wq
+
+git log: shows what u have done before
+
+git reset:unstages files
+
+git diff HEAD:shows the changes u have made
+
+git diff --staged:shows the changes made on staged files(shows the difference between staged and main file)
+
+git checkout --:takes out sth from the first place
+
+git branch branchname:make a new branch
+
+git checkout branchname:goes to the branch
+
+git maerge otherbranchname:merges branch to master branch
+
+git rm filename:deletes the file from every where even the system itself
+
+git branch -d branchname:deletes the branch(cause we dont wanna have too many branches)
+
+git clone address: puts all the files from the address to you
