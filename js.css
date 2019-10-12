@@ -93,3 +93,147 @@ table{
     width: 300px;
     height: 300px;
 }
+#onmouse-img img{
+    width: 100px;
+    height: 100px;
+    
+}
+h1::after{
+    content: url(im.jpg);
+}
+
+#firstletter::first-letter{
+    font-size: 50px;
+    color: crimson;
+}
+#firstletter::selection{
+    color: antiquewhite;
+    background-color: black;
+}
+#back{
+    width: 100%;
+    height: 100px;
+    background-image: url(index2.jpg);
+}
+#pbox
+{
+    width: 70%;
+    height: 60px;
+    border-style: solid;
+    margin:20px;
+    background-color: #ffffff;
+    opacity: 0.3;
+
+}
+#list li
+{
+    width: 200px;
+    height: 30px;
+    list-style-type: none;
+    background-color: darkgrey
+
+}
+
+#list li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+#list li:hover
+{
+    background-color: dimgrey;
+
+}
+.secondlist
+{
+    background-color:darkgrey;
+    width: 200px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+li a.firstlink
+{
+    background-color: black;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+.secondlist li a:not(.firstlink)
+{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.secondlist li a:hover:not(.firstlink)
+{
+    background-color: dimgrey;
+    color: white;
+}
+.dropdown
+{
+    display: inline-block;
+    position: relative;
+    height: 150px;
+}
+.drpbtn
+{
+    width: 100px;
+    height: 40px;
+    background-color: blueviolet;
+    font-size: 18px;
+    border: none;
+}
+.drop-down
+{
+    display: none;
+    background-color: darksalmon;
+    width: 100px;
+}
+.drop-down a
+{
+    text-decoration: none;
+    padding:5px;
+    text-align: center;
+    display: block;
+}
+.dropdown:hover .drop-down
+{
+    display: block;
+}
+.drop-down a:hover
+{
+    background-color: burlywood;
+}
+.img-drop-down img
+{
+    width: 200px;
+    height: 200px;
+}
+.img-drop-down div
+{
+    width: 200px;
+    text-align: center;
+    padding-top:10px; 
+    padding-bottom: 11px;
+    font-size: 18px;
+}
+.img-drop-down 
+{
+    width: 200px;
+    height: 250px;
+    display: none;
+    border-style: solid;
+    border-color: white;
+}
+.img-drop
+{
+    width: 100px;
+    height: 100px;
+}
+
+.img-dropdown:hover .img-drop-down
+{
+    display: block;
+}

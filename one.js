@@ -449,3 +449,13 @@ function removeoption(){
      document.getElementById("sltperson").options.remove(index);
    }
 }
+function largerimg(img)
+{
+  img.style.width="200px";
+  img.style.height="200px";
+}
+function lowerimg(imgg)
+{
+  imgg.style.width="100px";
+  imgg.style.height="100px";
+}
