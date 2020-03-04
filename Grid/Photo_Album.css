@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://source.unsplash.com/random/1366x768?v=1);
+    background-size: cover;
+}
+.photo_album{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-gap: 30px;
+    justify-content: space-around;
+}
+.card{
+    padding: 20px;
+    background-color: rgb(213, 12, 231 , 0.3);
+    box-shadow: 10px 10px 20px rgb(181, 9, 197);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+}
+.thumbnail{
+    width: 100%;
+}
+.card-description{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px 100px;
+    justify-items: start;
+    align-items: center;
+    grid-gap: 8px;
+    font:12px;
+}
+.card-title{
+    font-size: 18px;
+    font-weight: bold;
+}

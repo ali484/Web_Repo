@@ -1,5 +1,6 @@
+
 * {
-	box-sizing: border-box;
+	box-sizing: border-box; /*margin and padding and border are included and width doesnt apply only to content area */
 }
 body {
 	/* background-color: #D8D6D3; */
@@ -349,7 +350,7 @@ tr {
 	left: 0;
 	right: 0;
 	width: 0;
-	height: 80%;
+	height: 76.7%;
 	background-color: rgb(53, 140, 211);
 	/* border-radius: 10px; */
 	color: #050505;
@@ -689,64 +690,6 @@ tr {
 /*                        Grid                         */
 /*                                                     */
 /*                                                     */
-#box-container {
-	display: flex;
-	height: 400px;
-	flex-direction: row; /*column -- column-reverse -- ...*/
-	justify-content: end; /*flex-end -- ...*/
-	align-items: center;
-	flex-wrap: wrap;
-}
-#box-1 {
-	background-color: rgb(70, 143, 253);
-	height: 150px;
-	width: 300px;
-	/* order:2; */
-	/* flex-shrink: 1; */
-	/* flex-grow: 1; */
-}
-#box-2 {
-	background-color: rgb(10, 243, 88);
-	height: 150px;
-	width: 300px;
-	/* order:1; */
-	/* flex-shrink: 2; */
-	/* flex-grow: 2; */
-}
-#box-3 {
-	background-color: rgb(89, 12, 211);
-	height: 150px;
-	width: 300px;
-	/* order:5; */
-	/* flex-shrink: 3; */
-	/* flex-grow: 3; */
-}
-#box-4 {
-	background-color: rgb(12, 211, 161);
-	height: 150px;
-	width: 300px;
-	/* order:4; */
-	/* flex-shrink: 4; */
-	/* flex-grow: 4; */
-}
-#box-5 {
-	background-color: rgb(211, 12, 128);
-	height: 150px;
-	width: 300px;
-	/* order:3; */
-	/* flex-shrink: 5; */
-	/* flex-grow: 5; */
-}
-#box-6 {
-	background-color: rgb(223, 148, 8);
-	height: 150px;
-	width: 300px;
-	max-width: 350px;
-	/* order:6; */
-	/* align-self: flex-start; */
-	/* flex-shrink: 6; */
-	/* flex-grow: 6; */
-}
 #js_paragraph {
 	border-width: 20px;
 	border-style: solid;
