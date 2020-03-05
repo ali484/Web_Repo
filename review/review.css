@@ -4,11 +4,9 @@
     direction: rtl;
     border-style: solid;
     border-width: 1px;
-   
     padding: 3px;
     float: right;
 }
-
 .colortitle
 {
     background-color: burlywood;
@@ -34,13 +32,22 @@ li a:hover:not(.colortitle)
 }
 .firstdrop
 {
+    margin-left: 500px;
     background-color: yellow;
     width: 200px;
     height: 30px;
     text-align: center;
     display: block;
     position: relative;
-    
+}
+.firstdrop .seconddrop
+{
+    /* background-color: yellow; */
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    display: none;
+    position: relative;
 }
 .seconddrop
 {
@@ -53,7 +60,8 @@ li a:hover:not(.colortitle)
 }
 .firstdrop:hover .seconddrop
 {
-    background-color: black;
+    /* background-color: black; */
+    display: block;
 }
 #secondtest
 {
@@ -61,6 +69,7 @@ li a:hover:not(.colortitle)
     height: 100px;
     color: blue;
     display: none;
+    margin-top: 500px;
 }
 #test
 {
