@@ -55,3 +55,22 @@ li a:hover:not(.colortitle)
 {
     background-color: black;
 }
+#secondtest
+{
+    width: 100px;
+    height: 100px;
+    color: blue;
+    display: none;
+}
+#test
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+#test:hover #secondtest
+{
+    display: block;
+}
+
+
