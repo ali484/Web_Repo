@@ -47,11 +47,13 @@ body{
 .code{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 .txt-area{
     border: 1px solid #2b2b2b;
-    background-color: #041103;
+    background-color: #1b2b34;
     color: green;
+    grid-column: span 2;
     font-family: Arial;
 }
 .preview{
@@ -62,4 +64,27 @@ body{
 .iframe{
     grid-row: 1/-1;
     grid-column: 1/-1;
+}
+.settings{
+    margin-left: 5px;
+}
+.settings button{
+    outline: none;
+    margin: 0 5px;
+    padding: 2px;
+}
+.IDE{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
+    background-color: #1b2b34;
+}
+ol{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+
+}
+li{
+    padding: 3px 5px;
 }
