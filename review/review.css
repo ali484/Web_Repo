@@ -4,11 +4,9 @@
     direction: rtl;
     border-style: solid;
     border-width: 1px;
-   
     padding: 3px;
     float: right;
 }
-
 .colortitle
 {
     background-color: burlywood;
@@ -22,53 +20,64 @@ li a
 li a:hover:not(.colortitle)
 {
     background-color: white;
-
-}
-.dropdown
-{
-    margin : 0px;
-    direction: rtl;
-    margin-right: 300px;
-    position: relative;
-    display: block;
 }
 .firstdrop
 {
-    background-color: yellow;
     width: 200px;
-    height: 30px;
-    text-align: center;
+    height: 25px;
+    background-color: yellow;
+    margin-left: 800px;
+    direction: rtl;
+    padding: 3px;
     display: block;
-    position: relative;
-    
-}
-.seconddrop
-{
-    display: block;
-    position:relative;
 }
 .seconddrop a
 {
-    display:block;
+    display: block;
+    color: yellow;
+}
+.seconddrop
+{
+    background-color: black;
+    display: none;
+    width: 205px;
+    height: 75px;
+    margin-top:10px;
+    margin-right: -3px;
 }
 .firstdrop:hover .seconddrop
 {
-    background-color: black;
+    display: block;
 }
-#secondtest
+.removeimg img
 {
-    width: 100px;
-    height: 100px;
-    color: blue;
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 20px;
+    outline: blue;
+    outline-width: 2px;
+    outline-style: solid;
+    display: block;
+}
+.removeimg
+{
+    width: 400px;
+    height: 450px;
+    border-style: solid;
+    border-width: 2px;
+}
+.removeimg div
+{
+    width: 300px;
+    height: 50px;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 47px;
+    margin-top: 10px;
+    text-align: center;
+}
+.desdangold:hover ~ img
+{
     display: none;
-}
-#test
-{
-    display: block;
-    width: 100px;
-    height: 100px;
-}
-#test:hover #secondtest
-{
-    display: block;
 }
