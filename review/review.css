@@ -55,7 +55,7 @@ li a:hover:not(.colortitle)
     height: 350px;
     margin-left: 50px;
     margin-top: 20px;
-    outline: blue;
+    outline:yellow;
     outline-width: 2px;
     outline-style: solid;
     display: block;
@@ -80,4 +80,10 @@ li a:hover:not(.colortitle)
 .desdangold:hover ~ img
 {
     display: none;
+}
+.overflow
+{
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
 }
