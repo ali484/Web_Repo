@@ -1,0 +1,8 @@
+.countainer
+{
+    display: grid;
+    text-align: center;
+    grid-gap:20px;
+    background-color: khaki;
+    grid-template-columns: 1fr 100px 200px 1fr;
+}
