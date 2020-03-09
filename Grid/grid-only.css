@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-image: url(Background.jpg);
+	background-size: cover;
+}
+.mt{
+	margin-top: 20px;
+}
+.container {
+	display: grid;
+	border: 5px solid red;
+	grid-gap: 20px;
+	height: 400px;
+	grid-template-columns: repeat(5, 1fr); /*makes three columns each 100 px wide */ /*you can use repeat function*/ /**/
+	grid-template-rows: auto auto;
+	/* grid-auto-rows: 50px; */ /*the size of implicitly added rows obviously we have auto-columns too */
+	border-radius: 10px;
+	/* grid-auto-flow: column; */ /*this determines if extra items should be added in rows or columns*/
+	/* grid-gap: 20px; */
+}
+.item9{
+	/* width:600px; */
+	grid-column: span 2;
+}
+
+.item13{
+	/* width:600px; */
+	grid-column: span 3;
+}
+
+.item1{
+	grid-row: span 2;
+}
+.item23{
+	grid-column: 2/3;/* grid-column-start: 2; grid-column-end: 5; grid-column: 1/span 3;
+	we can put span: 1/-1 which will span it through the whole line this(-1 value) will only work if you are defining grid-template-columns:
+	or grid-template-rows: in your container*/
+	grid-row: 2/3;/* grid-row-start: 2;grid-row-end: 5; */
+}
+
+.container-1 {
+	display: grid;
+	border: 5px solid red;
+	grid-gap: 20px;
+	height: 400px;
+	grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); /*by using auto-fill we are telling the browser to calcualte how many it can 
+	fit based on the width of each one*/
+	/* grid-template-rows: auto auto; */
+	/* grid-auto-rows: 50px; */ /*the size of implicitly added rows obviously we have auto-columns too */
+	border-radius: 10px;
+	/* grid-auto-flow: column; */ /*this determines if extra items should be added in rows or columns*/
+	/* grid-gap: 20px; */
+}
+.container-2 {
+	display: grid;
+	border: 5px solid red;
+	grid-gap: 20px;
+	/* height: 400px; */
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); /*by using auto-fill we are telling the browser to calcualte how many it can 
+	/*fit based on the width of each one*/
+	/* grid-template-columns: fit-content(300px) 300px 300px; */
+	/* grid-template-rows: auto auto; */
+	/* grid-auto-rows: 50px; */ /*the size of implicitly added rows obviously we have auto-columns too */
+	border-radius: 10px;
+	/* grid-auto-flow: column; */ /*this determines if extra items should be added in rows or columns*/
+	/* grid-gap: 20px; */
+}
+.container-3 {
+	display: grid;
+	border: 5px solid rgb(255, 38, 0);
+	grid-gap: 20px;
+	/* height: 400px; */
+	/* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); /*by using auto-fill we are telling the browser to calcualte how many it can  */
+	/*fit based on the width of each one*/
+	grid-template-areas: "sidebar1 content	sidebar2"
+						 "sidebar1 content sidebar2"
+						 "footer footer footer";
+	grid-template-columns: [side-bar-start side-left]1fr [content-row-1] 500px [content-row-2] 1fr [side-right];
+	grid-template-rows: 150px 150px 150px;
+	/* grid-template-columns: fit-content(300px) 300px 300px; */
+	/* grid-template-rows: auto auto; */
+	/* grid-auto-rows: 50px; */ /*the size of implicitly added rows obviously we have auto-columns too */
+	border-radius: 10px;
+	/* grid-auto-flow: column; */ /*this determines if extra items should be added in rows or columns*/
+	/* grid-gap: 20px; */
+}
+.item3-1{
+	grid-area: sidebar1;
+}
+.item3-2{
+	grid-area: content;
+}
+.item3-3{
+	grid-area: sidebar2;
+}
+.item3-4{
+	grid-area: footer;
+}
+.item{
+	/* margin: 10px; */
+	border: 1px solid rgb(255, 239, 15);
+	border-radius: 2px;
+	text-align: center;
+	background-color: rgb(255, 239, 15);
+	color: #086100;
+}
+@media (max-width:700px)
+{
+	.container-3{
+		grid-template-areas: "content content content"
+							"sidebar1 sidebar1 sidebar2"
+							"footer footer footer";
+	}	
+}
+
