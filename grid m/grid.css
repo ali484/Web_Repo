@@ -4,15 +4,21 @@
     text-align: center;
     grid-gap:20px;
     grid-template-columns: repeat(5 , 1fr);
-    grid-template-rows: repeat(4 , 1fr);
-    grid-template-areas: 
-    "side-1  side-2"
-    "side-1  side-2"
-    "side-1  side-2"
-    "side-1  side-2"
+    height: 300px;
+    grid-auto-flow: dense;
 }
 .item
 {
    border: 5px solid rgba(0, 0, 0, 0.03);
-   background-color: yellow;
+   background-color: rgb(193, 14, 209);
+}
+.item4
+{
+    grid-column: span 3;
+    background-color: lavenderblush;
+}
+.item14
+{
+    grid-row: span 5;
+    background-color: lavenderblush;
 }

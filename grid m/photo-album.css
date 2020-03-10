@@ -1,0 +1,40 @@
+body
+{
+    background-image: url("backalbum2.jpg");
+    background-size: cover;
+}
+.photo
+{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.albums
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    grid-gap: 20px;
+}
+.album
+{
+    display: grid;
+    grid-template-columns:repeat(auto-fit ,minmax(90px , 1fr)) ;
+    grid-template-rows:repeat(auto-fit , 1fr ,1fr);
+    grid-gap:10px;
+    box-shadow:4px 4px 10px rgb(67, 97, 216 );
+    background-color: rgb(67, 97, 216 , 0.2);
+    grid-area: "photo photo1 photo3";
+}
+p
+{
+    margin-left: 5px;
+}
+.des-photo
+{
+    padding-left: 5px;
+}
+.album:hover
+{
+    box-shadow: 15px 15px 15px rgb(4, 3, 51);
+}
