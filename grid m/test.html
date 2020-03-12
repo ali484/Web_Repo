@@ -1,0 +1,62 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="divimg">
+           
+            <img src="images/3.jpg" class="imgclass"/>
+            <div class="divclass">
+                i am div
+            </div>
+        </div>
+        <style>
+           .imgclass
+            {
+              width: 300px;
+              height: 300px;
+              position:absolute;
+              object-fit: cover;
+             
+            }
+           .divimg
+           {
+               display: grid;
+               grid-template-columns: 1;
+               grid-template-rows: 1;
+               border: 2px solid;
+               width:300px;
+               grid-column: 1/-1;
+               grid-row: 1/-1;
+           }
+           .divclass
+           {
+               display: grid;
+               position: relative;
+               grid-row: 1/-1;
+               grid-column: 1/-1;
+               height: 300px;
+               background-color: chartreuse;
+               transform: translateY(100%);
+               transition: 0.2s;
+           }
+           .divimg:hover .divclass
+           {
+               transform: translateY(0%);
+               
+
+           }
+
+
+
+
+
+
+
+
+
+
+
+        </style>
+    </body>
+</html>
