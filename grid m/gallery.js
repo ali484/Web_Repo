@@ -1,12 +1,11 @@
 Gallery = document.getElementsByClassName("gallery")[0]
 
-function Generatediv([h , v])
-{
+function Generatediv([h, v]) {
     return `<div class="item h${h} v${v}">
     
                 <div class="overlay-item">
                     <button>
-                        viwe
+                        view
                     </button>
                     
                 </div>
@@ -14,9 +13,8 @@ function Generatediv([h , v])
                 
             </div>`
 }
-function randomnumber(limit)
-{
-    return Math.floor((Math.random()*limit)+1);
+function randomnumber(limit) {
+    return Math.floor((Math.random() * limit) + 1);
 }
 
 const digits = Array.from({ length: 50 }, () => [randomnumber(4), randomnumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
