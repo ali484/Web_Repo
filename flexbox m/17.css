@@ -1,0 +1,65 @@
+body
+{
+    background: linear-gradient(to right , #ffffff , #9898b6);
+}
+*
+{
+    margin:0px;
+    padding: 0px;
+    
+
+}
+.plan a
+{
+    background-color: #4c78ff;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 15px;
+    box-shadow: 0px 0px 5px 2px #4c79ff70;
+    
+}
+.price-grid
+{
+    display: flex;
+    align-items: center;
+    
+    
+}
+ul
+{
+   
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: 12px;
+}
+li
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.plan
+{
+    background-color:#ffffff88;
+    margin: 20px;
+    width: 700px;
+    border-radius: 2px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.plan > *
+{
+    flex: 1 1 100%;
+}
+.plan p
+{
+ 
+    font-size: 15px;
+    margin: 10px;
+}
+.plan h2
+{
+    color: #37487c;
+    font-size: 30px;
+}
