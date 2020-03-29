@@ -1,0 +1,63 @@
+.item
+{
+    background-color: lightcoral;
+    margin: 2px;
+    text-align: center;
+    height: 50px;
+    flex-grow: 1;
+}
+.container
+{
+    display: flex;
+    border: 2px solid;
+  
+}
+.item5
+{
+   flex-shrink: 4;
+}
+/* *************************************************** */
+.flex-nav
+{
+    margin-top: 100px;
+   
+}
+.flex-nav ul
+{
+    display: flex;
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+}
+.flex-nav li
+{
+    flex: 3;
+    background-color: lightcoral;
+    text-align: center;
+}
+.flex-nav .social
+{
+    flex: 1;
+}
+.flex-nav li:hover
+{
+    background-color: rgba(103, 110, 95, 0.795);
+}
+@media all and (max-width:700px)
+{
+    .flex-nav ul
+    {
+        flex-wrap: wrap;
+    }
+    .flex-nav li
+    {
+        
+        flex: 1 1 42%;
+        
+    }
+    .flex-nav .social
+    {
+        flex:1 1 20%;
+        
+    }
+}
