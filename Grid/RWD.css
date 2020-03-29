@@ -12,10 +12,19 @@ button{
 img{
     max-width: 100%;
 }
+
+/*                      Wrapper                             */
+
 .wrapper{
     display: grid;
     /* justify-items: center; */
 }
+
+
+
+/*                      Top                              */
+
+
 .top{
     display: grid;
     grid-gap: 20px;
@@ -64,7 +73,14 @@ img{
     font-size: 20px;
 }
 
-/* Navigation */
+
+
+
+/*                Navigation                           */
+
+
+
+
 
 .menu ul{
     display: grid;
@@ -89,7 +105,12 @@ img{
     display: none;
 }
 
-/* features */
+
+
+/*                             features                                  */
+
+
+
 .features{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -108,7 +129,7 @@ img{
     font-size: 60px;
 }
 
-/* About */
+/*                                 About                                */
 
 .about{
     display: grid;
@@ -125,10 +146,17 @@ img{
     width: 100%;
 }
 
-/* Gallery */
+
+
+
+
+/*                                 Gallery                                         */
+
+
+
+
 .gallery{
     display: grid;
-    margin: 10px;
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     grid-gap: 10px;
     margin: 20px;
