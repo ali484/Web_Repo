@@ -12,12 +12,12 @@ body{
     justify-content: space-around;
 }
 .card{
-    padding: 20px;
-    background-color: rgb(213, 12, 231 , 0.3);
-    box-shadow: 10px 10px 20px rgb(181, 9, 197);
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-gap: 10px;
+    padding: 20px;
+    background-color: rgb(213, 12, 231 , 0.3);
+    box-shadow: 10px 10px 20px rgb(181, 9, 197);
 }
 .thumbnail{
     width: 100%;

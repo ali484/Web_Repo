@@ -1,0 +1,42 @@
+$mycolor : #5c5c5c;
+$colors : (
+    primary : #005dff,
+    accent : #2116bb
+);
+
+@function color($color-name)
+{
+    @return map-get($colors,$color-name);
+}
+
+$desktop : 840px;
+
+@mixin desktop{
+    @media(min-width: #{$desktop})
+    {
+        @content;
+    }
+}
+
+body, html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background-color: $mycolor;
+    #Background{
+        clip-path: polygon(50% 0%, 100% 0, 100% 33%, 50% 100%, 0 100%, 0 0);
+        background-color: color(primary);
+        width: 100%;
+        height: 100%;
+
+        @include desktop{
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+        }
+    }
+}
+p{
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: map-get($colors, primary);
+}
