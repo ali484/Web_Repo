@@ -38,23 +38,16 @@ document.getElementById("addnewtags").appendChild(newpre);
 }*/
 function appendchild(){
   var txt="mohadese"
- var txtp1=document.createElement("p")
-var p1text=txtp1.innerHTML="mahadese size="+ txt.length+"<br />"
-document.getElementById("showmethods").appendChild(txtp1)
-
-
-
- var txtp2=document.createElement("p")
- var p2text=txtp2.innerHTML="the third letter of mohadese=" +txt.charAt(3)+"<br />"
- document.getElementById("showmethods").appendChild(txtp2)
-
-
-var txt1="ali"
-var txtp3=document.createElement("p")
-var p3text=txtp3.innerHTML="combining strings="+txt.concat(txt1)
-document.getElementById("showmethods").appendChild(txtp3)
-
-
+  var txtp1=document.createElement("p")
+  var p1text=txtp1.innerHTML="mahadese size="+ txt.length+"<br />"
+  document.getElementById("showmethods").appendChild(txtp1)
+  var txtp2=document.createElement("p")
+  var p2text=txtp2.innerHTML="the third letter of mohadese=" +txt.charAt(3)+"<br />"
+  document.getElementById("showmethods").appendChild(txtp2)
+  var txt1="ali"
+  var txtp3=document.createElement("p")
+  var p3text=txtp3.innerHTML="combining strings="+txt.concat(txt1)
+  document.getElementById("showmethods").appendChild(txtp3)
 }
 function arraymethods(){
 var names1=["ali" , "reza" , "mohammad"]
@@ -79,8 +72,6 @@ numbers=numbers.sort(function(a , b){return a-b});//sort numbers in js:)
 //alert(numbers)
 //names3=names3.splice(1 , 2 ,"hasan" , "hosien")
 //alert(names3)
-
-
 }
 
 
@@ -459,3 +450,23 @@ function lowerimg(imgg)
   imgg.style.width="100px";
   imgg.style.height="100px";
 }
+// ***********************************************************************************
+class Color
+{
+  constructor(name)
+  {
+    this.colorname = name;
+  }
+  get colorn()
+  {
+    return this.colorname;
+  }
+  set colorna(n)
+  {
+    this.colorname = n;
+  }
+  
+}
+mycolor = new Color("red");
+
+document.getElementById("class").innerHTML = Boolean(x = 0);
