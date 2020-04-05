@@ -1,0 +1,20 @@
+html{
+    background-color: rgb(232, 248, 3);
+    /* box-sizing: border-box; */
+}
+* , *::before , *::after{
+    /* box-sizing: inherit; */
+}
+body{
+    margin: 0;
+    /* text-align: center; */
+}
+.search-form{
+    width: 350px;
+    margin: 50px auto;
+}
+input{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+}

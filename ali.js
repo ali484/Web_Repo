@@ -371,3 +371,7 @@ var input_string = document.getElementById('inputstr');
 console.log(input_string);
 var personn = 'ali';
 console.log('hello ${personn}')
+
+
+var myarrs = [1,2,3,4,5,6,6,"sad","djsalv"];
+myarrs.forEach(item => console.log(item)); 

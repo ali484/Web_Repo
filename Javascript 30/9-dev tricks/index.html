@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para" onclick="changeColor()">text to be edited</p>
+
+    <script>
+        text.addEventListener('click', changeColor)
+        function changeColor(){
+            const text = document.querySelector('.para');
+            text.style.color = '#BADA55';
+            text.style.fontSize = "24px";
+        }
+    </script>
+</body>
+</html>

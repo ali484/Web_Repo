@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change everything using CSS variables by JS</h2>
+    <div class="controls">
+        <label for="">spacing</label>
+        <input type="range" min="10" name="spacing" max="200" data-sizing="px">
+
+        <label for="">Blur</label>
+        <input type="range" min="0" max="25" name="blur" data-sizing="px">
+
+        <label for="">Base-color</label>
+        <input type="color" min="10" max="200" name="base">
+    </div>
+    <img src="image.jpg" alt="">
+
+    <style>
+        :root{
+            --BgColor : #001cb8;
+            --base : #ffc600;
+            --spacing : 10px;
+            --blur : 10px;
+            --big: 30px;
+            --bigger:48px;
+
+        }
+        body{
+            background-color: var(--BgColor);
+            display: flex;
+            flex-direction: column;
+        }
+        .hl{
+            color: var(--base);
+        }
+        input{
+            cursor: pointer;
+        }
+        input[type="color"]{
+            align-self: center;
+        }
+        h2{
+            font-size: var(--bigger);
+            text-align: center;
+        }
+        label
+        {
+            font-size: var(--big);
+            padding: 16px;
+            color: var(--base);
+        }
+        .controls{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        img{
+            filter: blur(var(--blur));
+            width: 1000px;
+            height: 500px;
+            text-align: center;
+            margin:30px auto;
+            padding: var(--spacing);
+        }
+    </style>
+    <script>
+        const inputs = document.querySelectorAll('.controls input');
+        function updateEvent(){ //this is refring to the input tag
+            // console.log(this.value);
+            // console.log(this.dataset);
+            const suffix = this.dataset.sizing || "";
+            console.log("suffix is : ",suffix);
+            // const suffix = this.dataset || ""; this means its either equal to this.dateset or nothing
+            console.log(`--${this.name}` + this.value + suffix);
+            document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+        }
+        inputs.forEach(input => input.addEventListener("change",updateEvent));
+    </script>
+</body>
+</html>
