@@ -46,6 +46,7 @@ body
 {
     flex: 3;
     font-size: 25px;
+    
 }
 .header div div
 {
@@ -58,6 +59,52 @@ body
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+@media all and (max-width:600px)
+{
+    .header p
+    {
+        font-size: 17px;
+        padding-top: 10px;
+       padding-left: 10px;
+    }
+    .header div div
+    {
+        padding-left: 10px;
+    }
+}
+@media all and (max-width:1100px)
+{
+    .header div div
+    {
+        padding-left: 10px;
+    }
+    .header p
+    {
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 10px;
+       
+    }
+}
+@media all and (max-width:900px)
+{
+    .header p
+    {
+        font-size: 20px;
+        padding-top: 10px;
+       
+    }
+}
+@media all and (max-width:500px)
+{
+    .header p
+    {
+        font-size: 16px;
+        padding-top: 15px;
+        font-weight: 700;
+       
+    }
 }
 /* *********************************************************************************************** navbar*/
 .navbar-container
@@ -94,12 +141,32 @@ body
     font-size: 25px;
     background-color: var(--yellow);
     color: #000000;
-    border-radius: 15px;
     margin-top: 30px;
     padding-top: 3%;
-    box-shadow: 2px 2px 2px 2px var(--black);
+    cursor: pointer;
+    position: relative;
 }
 
+/* .navbar ul >*::before,.navbar ul >*::after
+{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color:var(--yellow);
+    transform: skewX(50deg);
+    transition: 0.4s linear;
+}
+.navbar ul>*::before
+{
+    top: -4px;
+    left: 10%;
+}
+.navbar ul>*::after
+{
+    bottom:-4px;
+    right: 10%;
+} */
 .searchbar
 {
     flex: 4;
@@ -117,7 +184,8 @@ body
     border: 1px solid var(--black);
     background-color: var(--tosi);
     border-radius: 20px;
-} 
+}
+
 @media all and (max-width:1000px)
 {
     .navbar ul > *
@@ -130,6 +198,9 @@ body
     .navbar ul > *
     {
         font-size: 15px;
+        font-weight: 600;
+        padding-top: 10px;
+        height: 35px;
     }
 }
 @media all and (max-width:600px)
@@ -140,17 +211,27 @@ body
     }
     .navbar ul
     {
-        display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
     }
     .navbar ul >*
     {
-        width: 20%;
-        height: 40%;
+        font-size: 13px;
+        font-weight: 700;
+        width: 23%;
+        height: 30%;
         text-align: center;
         padding: 0px;
         padding-top: 5px;
     }
+}
+/* ***************************************************************************************************************** */
+.body
+{
+    display: grid;
+    grid-template-rows: repeat(auto , 4);
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    border: 2px solid black;
 }
