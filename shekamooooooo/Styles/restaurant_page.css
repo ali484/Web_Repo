@@ -86,7 +86,7 @@ header{
 main{
     width: 90%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     /* border: 1px solid black; */
