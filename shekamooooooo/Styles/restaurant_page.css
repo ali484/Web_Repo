@@ -10,7 +10,7 @@ body{
 }
 
 *{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     /* border: solid 1px black; */
 }
 p{
@@ -89,6 +89,7 @@ header{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    
     /* border: 1px solid black; */
 }
 
@@ -205,4 +206,68 @@ header{
 .between-items{
     margin-top: 24px;
     width: 100%;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.each-comment{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+}
+.name-comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    margin-right: 10px;
+}
+.name{
+    flex: 2;
+    font-family: main-font;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.comment{
+    flex: 5;
+    font-family: main-font;
+    word-wrap: break-word;
+}
+.comment-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+.comment-box{
+    direction: rtl;
+    font-family: main-font;
+    width: 80%;
+    height: 100px;
+    margin-top: 100px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    border: 1px solid #a3a3a3;
+    resize: none;
+    padding: 8px;
+    
+}
+.comment-submit{
+    border-radius: 8px;
+    background-color: #2d81ff;
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    margin-right: 8px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.comment-submit:focus{
+    border: none;
+    outline: none;
 }
